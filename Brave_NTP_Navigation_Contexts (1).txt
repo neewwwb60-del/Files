@@ -1,0 +1,6227 @@
+
+================================================================================
+FILE: /content/classes_smali/h09.smali
+MATCH LINE: 85
+    .line 5
+    iget-object v1, p0, Li09;->d:Lfqd;
+
+    .line 6
+    .line 7
+    iget-object v2, v1, Lfqd;->a:Ly1d;
+
+    .line 8
+    .line 9
+    iget-object v2, v2, Ly1d;->v:Ljava/lang/Object;
+
+    .line 10
+    .line 11
+    check-cast v2, Lcqd;
+
+    .line 12
+    .line 13
+    iget-byte v2, v2, Lcqd;->u:B
+
+    .line 14
+    .line 15
+    const/4 v3, 0x3
+
+    .line 16
+    const/4 v4, 0x1
+
+    .line 17
+    if-eqz v2, :cond_16
+
+    .line 18
+    .line 19
+    if-eq v2, v4, :cond_16
+
+    .line 20
+    .line 21
+    if-ne v2, v3, :cond_75
+
+    .line 22
+    .line 23
+    :cond_16
+    iget-object p0, p0, Li09;->f:Lzqg;
+
+    .line 24
+    .line 25
+    invoke-virtual {p0}, Lzqg;->a()Lyqg;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v2
+
+    .line 29
+    iget-object v5, v2, Lyqg;->a:Landroid/content/Intent;
+
+    .line 30
+    .line 31
+    new-instance v6, Lorg/chromium/url/GURL;
+
+    .line 32
+    .line 33
+    const-string v7, "chrome://newtab/"
+
+    .line 34
+    .line 35
+    invoke-direct {v6, v7}, Lorg/chromium/url/GURL;-><init>(Ljava/lang/String;)V
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-static {v6}, Lorg/chromium/url/GURL;->m(Lorg/chromium/url/GURL;)Z
+
+    .line 39
+    .line 40
+    .line 41
+    move-result v7
+
+    .line 42
+    if-eqz v7, :cond_2d
+
+    .line 43
+    .line 44
+    const/4 v6, 0x0
+
+    .line 45
+    goto :goto_31
+
+    .line 46
+    :cond_2d
+    invoke-virtual {v6}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v6
+
+    .line 50
+    :goto_31
+    const-string v7, "org.chromium.chrome.browser.ui.searchactivityutils.current_url"
+
+    .line 51
+    .line 52
+    invoke-virtual {v5, v7, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 53
+    .line 54
+    .line 55
+    sget-object v6, Lj09;->i:Lebf;
+
+    .line 56
+    .line 57
+    invoke-virtual {v0, v6}, Lorg/chromium/ui/modelutil/PropertyModel;->i(Lcbf;)Z
+
+    .line 58
+    .line 59
+    .line 60
+    move-result v6
+
+    .line 61
+    const-string v7, "org.chromium.chrome.browser.ui.searchactivityutils.is_incognito"
+
+    .line 62
+    .line 63
+    invoke-virtual {v5, v7, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 64
+    .line 65
+    .line 66
+    const-string v6, "org.chromium.chrome.browser.ui.searchactivityutils.resolution_type"
+
+    .line 67
+    .line 68
+    const/4 v7, 0x0
+
+    .line 69
+    invoke-virtual {v5, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 70
+    .line 71
+    .line 72
+    invoke-virtual {v2}, Lyqg;->a()Landroid/content/Intent;
+
+    .line 73
+    .line 74
+    .line 75
+    move-result-object v2
+
+    .line 76
+    invoke-virtual {p0, v2}, Lzqg;->b(Landroid/content/Intent;)V
+
+    .line 77
+    .line 78
+    .line 79
+    sget-object p0, Lj09;->d:Lebf;
+
+    .line 80
+    .line 81
+    invoke-virtual {v0, p0}, Lorg/chromium/ui/modelutil/PropertyModel;->i(Lcbf;)Z
+
+    .line 82
+    .line 83
+
+================================================================================
+FILE: /content/classes_smali/bzi.smali
+MATCH LINE: 1195
+    .line 527
+    invoke-interface {v2, v0}, Lmbj;->Y0(Lorg/chromium/chrome/browser/tab/Tab;)I
+
+    .line 528
+    .line 529
+    .line 530
+    move-result v1
+
+    .line 531
+    const/4 v5, 0x1
+
+    .line 532
+    add-int/2addr v1, v5
+
+    .line 533
+    invoke-interface {v2}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->c()Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 534
+    .line 535
+    .line 536
+    move-result-object v3
+
+    .line 537
+    invoke-static {v3}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 538
+    .line 539
+    .line 540
+    move-result-object v3
+
+    .line 541
+    invoke-interface {v0}, Lorg/chromium/chrome/browser/tab/Tab;->getTabGroupId()Lorg/chromium/base/Token;
+
+    .line 542
+    .line 543
+    .line 544
+    move-result-object v4
+
+    .line 545
+    if-eqz v4, :cond_224
+
+    .line 546
+    .line 547
+    const/16 v6, 0xd
+
+    .line 548
+    .line 549
+    :cond_224
+    invoke-interface {v2}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->H0()Lozi;
+
+    .line 550
+    .line 551
+    .line 552
+    move-result-object v2
+
+    .line 553
+    new-instance v4, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 554
+    .line 555
+    const-string v5, "chrome-native://newtab/"
+
+    .line 556
+    .line 557
+    invoke-virtual {v3, v5}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 558
+    .line 559
+    .line 560
+    move-result-object v3
+
+    .line 561
+    const/4 v5, 0x0
+
+    .line 562
+    invoke-direct {v4, v5, v3}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 563
+    .line 564
+    .line 565
+    invoke-interface {v2, v4, v6, v0, v1}, Lozi;->a(Lorg/chromium/content_public/browser/LoadUrlParams;ILorg/chromium/chrome/browser/tab/Tab;I)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 566
+    .line 567
+    .line 568
+    return-void
+
+    .line 569
+    :cond_238
+    const/4 v5, 0x0
+
+    .line 570
+    const v4, 0x7f0100db
+
+    .line 571
+    .line 572
+    .line 573
+    if-ne v1, v4, :cond_24a
+
+    .line 574
+    .line 575
+    if-eqz v9, :cond_2d5
+
+    .line 576
+    .line 577
+    iget-object v0, v9, Ly1d;->v:Ljava/lang/Object;
+
+    .line 578
+    .line 579
+    check-cast v0, Ltvi;
+
+    .line 580
+    .line 581
+    if-eqz v0, :cond_2d5
+
+    .line 582
+    .line 583
+    invoke-virtual {v0, v6, v13, v5}, Ltvi;->a(ILjava/util/List;Z)V
+
+    .line 584
+    .line 585
+    .line 586
+    return-void
+
+    .line 587
+    :cond_24a
+    const v4, 0x7f010e99
+
+    .line 588
+    .line 589
+    .line 590
+    if-ne v1, v4, :cond_2be
+
+    .line 591
+    .line 592
+    invoke-interface {v2, v14}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->j(I)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 593
+    .line 594
+    .line 595
+    move-result-object v1
+
+    .line 596
+    if-eqz v1, :cond_2d5
+
+    .line 597
+    .line 598
+    invoke-interface {v1}, Lorg/chromium/chrome/browser/tab/Tab;->getUrl()Lorg/chromium/url/GURL;
+
+    .line 599
+    .line 600
+    .line 601
+    move-result-object v3
+
+    .line 602
+    if-eqz v3, :cond_2d5
+
+    .line 603
+    .line 604
+    iget-object v4, v3, Lorg/chromium/url/GURL;->a:Ljava/lang/String;
+
+================================================================================
+FILE: /content/classes_smali/x52.smali
+MATCH LINE: 4624
+    invoke-static {}, Lu9d;->b()Lu9d;
+
+    .line 54
+    .line 55
+    .line 56
+    move-result-object v0
+
+    .line 57
+    iget-object v0, v0, Lu9d;->a:Landroid/content/SharedPreferences;
+
+    .line 58
+    .line 59
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    .line 60
+    .line 61
+    .line 62
+    move-result-object v0
+
+    .line 63
+    const-string v1, "from_notification"
+
+    .line 64
+    .line 65
+    const/4 v2, 0x1
+
+    .line 66
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    .line 67
+    .line 68
+    .line 69
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    .line 70
+    .line 71
+    .line 72
+    const/4 v0, 0x0
+
+    .line 73
+    invoke-virtual {p0, v0}, Ldn3;->p0(Z)Lozi;
+
+    .line 74
+    .line 75
+    .line 76
+    move-result-object v1
+
+    .line 77
+    if-eqz v1, :cond_5c
+
+    .line 78
+    .line 79
+    invoke-virtual {p0, v0}, Ldn3;->p0(Z)Lozi;
+
+    .line 80
+    .line 81
+    .line 82
+    move-result-object p0
+
+    .line 83
+    const-string v0, "chrome-native://newtab/"
+
+    .line 84
+    .line 85
+    const/4 v1, 0x2
+
+    .line 86
+    invoke-interface {p0, v1, v0}, Lozi;->j(ILjava/lang/String;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 87
+    .line 88
+    .line 89
+    goto :goto_5c
+
+    .line 90
+    :cond_59
+    invoke-virtual {p0}, Lx52;->n5()V
+
+    .line 91
+    .line 92
+    .line 93
+    :cond_5c
+    :goto_5c
+    return-void
+.end method
+
+.method public final R4()V
+    .registers 6
+
+    .line 1
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    if-eqz v0, :cond_cd
+
+    .line 6
+    .line 7
+    sget-object v1, La6g;->a:Ljava/util/Map;
+
+    .line 8
+    .line 9
+    const-string v1, "notification_type"
+
+    .line 10
+    .line 11
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v2
+
+    .line 15
+    if-eqz v2, :cond_cd
+
+    .line 16
+    .line 17
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    .line 25
+    .line 26
+    .line 27
+    move-result v1
+
+    .line 28
+    const/4 v2, 0x2
+
+    .line 29
+    const/4 v3, 0x0
+
+    .line 30
+    const/4 v4, -0x1
+
+    .line 31
+    sparse-switch v1, :sswitch_data_ce
+
+    .line 32
+    .line 33
+    .line 34
+    goto/16 :goto_88
+
+    .line 35
+
+================================================================================
+FILE: /content/classes_smali/x52.smali
+MATCH LINE: 5058
+    .line 158
+    move-result-object v0
+
+    .line 159
+    invoke-virtual {v0}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 160
+    .line 161
+    .line 162
+    move-result-object v0
+
+    .line 163
+    if-eqz v0, :cond_cd
+
+    .line 164
+    .line 165
+    invoke-virtual {p0}, Ldn3;->g4()Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 166
+    .line 167
+    .line 168
+    move-result-object v0
+
+    .line 169
+    invoke-interface {v0}, Lorg/chromium/chrome/browser/tab/Tab;->getUrl()Lorg/chromium/url/GURL;
+
+    .line 170
+    .line 171
+    .line 172
+    move-result-object v0
+
+    .line 173
+    invoke-virtual {v0}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 174
+    .line 175
+    .line 176
+    move-result-object v0
+
+    .line 177
+    invoke-static {v0}, Lxhl;->k(Ljava/lang/String;)Z
+
+    .line 178
+    .line 179
+    .line 180
+    move-result v0
+
+    .line 181
+    if-nez v0, :cond_cd
+
+    .line 182
+    .line 183
+    invoke-virtual {p0, v3}, Ldn3;->p0(Z)Lozi;
+
+    .line 184
+    .line 185
+    .line 186
+    move-result-object p0
+
+    .line 187
+    const-string v0, "chrome-native://newtab/"
+
+    .line 188
+    .line 189
+    invoke-interface {p0, v2, v0}, Lozi;->j(ILjava/lang/String;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 190
+    .line 191
+    .line 192
+    goto :goto_cd
+
+    .line 193
+    :pswitch_c0
+    invoke-virtual {p0}, Lx52;->X4()Leq2;
+
+    .line 194
+    .line 195
+    .line 196
+    move-result-object p0
+
+    .line 197
+    iget-object v0, p0, Leq2;->a0:Landroid/widget/ImageButton;
+
+    .line 198
+    .line 199
+    invoke-virtual {p0, v0}, Leq2;->onClick(Landroid/view/View;)V
+
+    .line 200
+    .line 201
+    .line 202
+    goto :goto_cd
+
+    .line 203
+    :pswitch_ca
+    invoke-virtual {p0}, Lx52;->Q4()V
+
+    .line 204
+    .line 205
+    .line 206
+    :cond_cd
+    :goto_cd
+    return-void
+
+    .line 207
+    :sswitch_data_ce
+    .sparse-switch
+        -0x684c888c -> :sswitch_7f
+        -0x4fcc0e5e -> :sswitch_75
+        -0x4fcc0e20 -> :sswitch_6b
+        -0x4fcc0e1b -> :sswitch_61
+        -0x4834e768 -> :sswitch_57
+        0x5af1853 -> :sswitch_4d
+        0x23ecc836 -> :sswitch_43
+        0x23ecc856 -> :sswitch_39
+        0x23ecc88f -> :sswitch_2e
+        0x4197fa7d -> :sswitch_23
+    .end sparse-switch
+
+    .line 208
+    .line 209
+    .line 210
+    .line 211
+    .line 212
+    .line 213
+    .line 214
+    .line 215
+    .line 216
+    .line 217
+    .line 218
+    .line 219
+    .line 220
+    .line 221
+    .line 222
+    .line 223
+    .line 224
+    .line 225
+    .line 226
+    .line 227
+    .line 228
+    .line 229
+    .line 230
+    .line 231
+    .line 232
+    .line 233
+    .line 234
+    .line 235
+    .line 236
+    .line 237
+    .line 238
+    .line 239
+    .line 240
+    .line 241
+    .line 242
+    .line 243
+    .line 244
+    .line 245
+    .line 246
+    .line 247
+    .line 248
+    .line 249
+
+================================================================================
+FILE: /content/classes_smali/m3j.smali
+MATCH LINE: 268
+    invoke-static {p4}, Ldyi;->b(Lorg/chromium/components/browser_ui/widget/list_view/TouchTrackingListView;)Z
+
+    .line 89
+    .line 90
+    .line 91
+    move-result v5
+
+    .line 92
+    const/4 v6, 0x0
+
+    .line 93
+    const/4 v7, 0x0
+
+    .line 94
+    move-object v3, p2
+
+    .line 95
+    invoke-static/range {v2 .. v7}, Lvwj;->b(Lorg/chromium/chrome/browser/tabmodel/TabModel;Lorg/chromium/base/Token;IZZLpgj;)V
+
+    .line 96
+    .line 97
+    .line 98
+    const-string p0, "DeleteGroup"
+
+    .line 99
+    .line 100
+    invoke-static {v1, p0}, Lprj;->a(ILjava/lang/String;)V
+
+    .line 101
+    .line 102
+    .line 103
+    return-void
+
+    .line 104
+    :cond_67
+    const p4, 0x7f010b53
+
+    .line 105
+    .line 106
+    .line 107
+    if-ne p1, p4, :cond_88
+
+    .line 108
+    .line 109
+    invoke-interface {v2}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->c()Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 110
+    .line 111
+    .line 112
+    move-result-object p0
+
+    .line 113
+    invoke-static {p0}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 114
+    .line 115
+    .line 116
+    move-result-object p0
+
+    .line 117
+    const-string p1, "chrome-native://newtab/"
+
+    .line 118
+    .line 119
+    invoke-virtual {p0, p1}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 120
+    .line 121
+    .line 122
+    move-result-object p0
+
+    .line 123
+    new-instance p1, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 124
+    .line 125
+    invoke-direct {p1, v8, p0}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 126
+    .line 127
+    .line 128
+    invoke-static {v2, p1, p2}, Lu8j;->h(Lorg/chromium/chrome/browser/tabmodel/TabModel;Lorg/chromium/content_public/browser/LoadUrlParams;Lorg/chromium/base/Token;)V
+
+    .line 129
+    .line 130
+    .line 131
+    const-string p0, "NewTabInGroup"
+
+    .line 132
+    .line 133
+    invoke-static {v1, p0}, Lprj;->a(ILjava/lang/String;)V
+
+    .line 134
+    .line 135
+    .line 136
+    return-void
+
+    .line 137
+    :cond_88
+    const p4, 0x7f010a1e
+
+    .line 138
+    .line 139
+    .line 140
+    const/4 v4, 0x3
+
+    .line 141
+    if-ne p1, p4, :cond_d0
+
+    .line 142
+    .line 143
+    invoke-interface {v2}, Lmbj;->g()Z
+
+    .line 144
+    .line 145
+    .line 146
+    move-result p0
+
+    .line 147
+    invoke-static {p0}, Lalj;->l(Z)I
+
+    .line 148
+    .line 149
+    .line 150
+    move-result p0
+
+    .line 151
+    invoke-static {p0}, Lrc2;->l(I)I
+
+    .line 152
+    .line 153
+    .line 154
+    move-result p0
+
+    .line 155
+    if-ne p0, v7, :cond_a2
+
+    .line 156
+    .line 157
+    const-string p0, "MoveGroupToNewWindow"
+
+    .line 158
+    .line 159
+    invoke-static {v1, p0}, Lprj;->a(ILjava/lang/String;)V
+
+    .line 160
+    .line 161
+    .line 162
+    goto :goto_a7
+
+    .line 163
+    :cond_a2
+    const-string p0, "MoveGroupToAnotherWindow"
+
+    .line 164
+    .line 165
+    invoke-static {v1, p0}, Lprj;->a(ILjava/lang/String;)V
+
+    .line 166
+    .line 167
+
+================================================================================
+FILE: /content/classes_smali/nm8.smali
+MATCH LINE: 228
+    .line 46
+    .line 47
+    sget-object v0, Lxhl;->a:Ljava/util/regex/Pattern;
+
+    .line 48
+    .line 49
+    const/16 v0, 0x56
+
+    .line 50
+    .line 51
+    invoke-static {v0, p1}, LJ/N;->ZO(ILjava/lang/Object;)Z
+
+    .line 52
+    .line 53
+    .line 54
+    move-result v0
+
+    .line 55
+    if-eqz v0, :cond_40
+
+    .line 56
+    .line 57
+    const p1, 0x7f140c89
+
+    .line 58
+    .line 59
+    .line 60
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 61
+    .line 62
+    .line 63
+    move-result-object p0
+
+    .line 64
+    goto :goto_79
+
+    .line 65
+    :cond_40
+    if-eqz p2, :cond_4a
+
+    .line 66
+    .line 67
+    const p1, 0x7f140c80
+
+    .line 68
+    .line 69
+    .line 70
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object p0
+
+    .line 74
+    goto :goto_79
+
+    .line 75
+    :cond_4a
+    const-string p2, "chrome-native://newtab/"
+
+    .line 76
+    .line 77
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 78
+    .line 79
+    .line 80
+    move-result p2
+
+    .line 81
+    if-nez p2, :cond_62
+
+    .line 82
+    .line 83
+    const-string p2, "chrome://newtab/"
+
+    .line 84
+    .line 85
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 86
+    .line 87
+    .line 88
+    move-result p1
+
+    .line 89
+    if-nez p1, :cond_62
+
+    .line 90
+    .line 91
+    const p1, 0x7f140c8c
+
+    .line 92
+    .line 93
+    .line 94
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 95
+    .line 96
+    .line 97
+    move-result-object p0
+
+    .line 98
+    goto :goto_79
+
+    .line 99
+    :cond_62
+    const p1, 0x7f140c82
+
+    .line 100
+    .line 101
+    .line 102
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 103
+    .line 104
+    .line 105
+    move-result-object p0
+
+    .line 106
+    goto :goto_79
+
+    .line 107
+    :cond_6a
+    const p1, 0x7f140c7f
+
+    .line 108
+    .line 109
+    .line 110
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 111
+    .line 112
+    .line 113
+    move-result-object p0
+
+    .line 114
+    goto :goto_79
+
+    .line 115
+    :cond_72
+    const p1, 0x7f140c7c
+
+    .line 116
+    .line 117
+    .line 118
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 119
+    .line 120
+    .line 121
+    move-result-object p0
+
+    .line 122
+    :goto_79
+    return-object p0
+.end method
+
+
+================================================================================
+FILE: /content/classes_smali/nm8.smali
+MATCH LINE: 244
+
+    .line 55
+    if-eqz v0, :cond_40
+
+    .line 56
+    .line 57
+    const p1, 0x7f140c89
+
+    .line 58
+    .line 59
+    .line 60
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 61
+    .line 62
+    .line 63
+    move-result-object p0
+
+    .line 64
+    goto :goto_79
+
+    .line 65
+    :cond_40
+    if-eqz p2, :cond_4a
+
+    .line 66
+    .line 67
+    const p1, 0x7f140c80
+
+    .line 68
+    .line 69
+    .line 70
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object p0
+
+    .line 74
+    goto :goto_79
+
+    .line 75
+    :cond_4a
+    const-string p2, "chrome-native://newtab/"
+
+    .line 76
+    .line 77
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 78
+    .line 79
+    .line 80
+    move-result p2
+
+    .line 81
+    if-nez p2, :cond_62
+
+    .line 82
+    .line 83
+    const-string p2, "chrome://newtab/"
+
+    .line 84
+    .line 85
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 86
+    .line 87
+    .line 88
+    move-result p1
+
+    .line 89
+    if-nez p1, :cond_62
+
+    .line 90
+    .line 91
+    const p1, 0x7f140c8c
+
+    .line 92
+    .line 93
+    .line 94
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 95
+    .line 96
+    .line 97
+    move-result-object p0
+
+    .line 98
+    goto :goto_79
+
+    .line 99
+    :cond_62
+    const p1, 0x7f140c82
+
+    .line 100
+    .line 101
+    .line 102
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 103
+    .line 104
+    .line 105
+    move-result-object p0
+
+    .line 106
+    goto :goto_79
+
+    .line 107
+    :cond_6a
+    const p1, 0x7f140c7f
+
+    .line 108
+    .line 109
+    .line 110
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 111
+    .line 112
+    .line 113
+    move-result-object p0
+
+    .line 114
+    goto :goto_79
+
+    .line 115
+    :cond_72
+    const p1, 0x7f140c7c
+
+    .line 116
+    .line 117
+    .line 118
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 119
+    .line 120
+    .line 121
+    move-result-object p0
+
+    .line 122
+    :goto_79
+    return-object p0
+.end method
+
+.method public static c()I
+    .registers 1
+
+    .line 1
+    sget-object v0, Lzc7;->a:Lad7;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Lad7;->a()Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+
+================================================================================
+FILE: /content/classes_smali/u45.smali
+MATCH LINE: 701
+
+    .line 57
+    .line 58
+    iput-object p1, v0, Lt45;->Q:Lk80;
+
+    .line 59
+    .line 60
+    iput-object v0, p0, Lu45;->z:Lt45;
+
+    .line 61
+    .line 62
+    return-object v0
+.end method
+
+.method public final p()Z
+    .registers 2
+
+    .line 1
+    iget-object p0, p0, Lu45;->f:Lcz2;
+
+    .line 2
+    .line 3
+    if-eqz p0, :cond_e
+
+    .line 4
+    .line 5
+    invoke-virtual {p0}, Lcz2;->f0()I
+
+    .line 6
+    .line 7
+    .line 8
+    move-result p0
+
+    .line 9
+    const/16 v0, 0x9
+
+    .line 10
+    .line 11
+    if-ne p0, v0, :cond_e
+
+    .line 12
+    .line 13
+    const/4 p0, 0x1
+
+    .line 14
+    goto :goto_f
+
+    .line 15
+    :cond_e
+    const/4 p0, 0x0
+
+    .line 16
+    :goto_f
+    return p0
+.end method
+
+.method public final q(Ljava/lang/String;Lvec;Lorg/chromium/chrome/browser/tab/TabImpl;Lp7e;)Lvec;
+    .registers 12
+
+    .line 1
+    const-string v0, "chrome-native://newtab/"
+
+    .line 2
+    .line 3
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_11
+
+    .line 8
+    .line 9
+    iget-boolean v0, p3, Lorg/chromium/chrome/browser/tab/TabImpl;->x:Z
+
+    .line 10
+    .line 11
+    if-eqz v0, :cond_11
+
+    .line 12
+    .line 13
+    iget-object v0, p0, Lu45;->a:Lorg/chromium/chrome/browser/customtabs/a;
+
+    .line 14
+    .line 15
+    invoke-virtual {v0}, Lorg/chromium/chrome/browser/customtabs/a;->finish()V
+
+    .line 16
+    .line 17
+    .line 18
+    :cond_11
+    iget-object v0, p0, Lu45;->p:Ljava/util/function/Supplier;
+
+    .line 19
+    .line 20
+    invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    move-object v4, v0
+
+    .line 25
+    check-cast v4, Lejj;
+
+    .line 26
+    .line 27
+    const/4 v0, 0x0
+
+    .line 28
+    if-eqz p4, :cond_45
+
+    .line 29
+    .line 30
+    if-eqz p2, :cond_31
+
+    .line 31
+    .line 32
+    invoke-interface {p2}, Lvec;->T()Z
+
+    .line 33
+    .line 34
+    .line 35
+    move-result v1
+
+    .line 36
+    if-nez v1, :cond_31
+
+    .line 37
+    .line 38
+    invoke-interface {p2}, Lvec;->getUrl()Ljava/lang/String;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v1
+
+    .line 42
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 43
+    .line 44
+    .line 45
+    move-result v1
+
+    .line 46
+    if-eqz v1, :cond_31
+
+    .line 47
+    .line 48
+    move-object v0, p1
+
+    .line 49
+    goto :goto_41
+
+================================================================================
+FILE: /content/classes_smali/yt1.smali
+MATCH LINE: 213
+    .line 68
+    .line 69
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    .line 70
+    .line 71
+    .line 72
+    move-result-object v1
+
+    .line 73
+    invoke-virtual {v1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+
+    .line 74
+    .line 75
+    .line 76
+    move-result-object v1
+
+    .line 77
+    invoke-virtual {p3}, Lorg/chromium/components/bookmarks/BookmarkId;->toString()Ljava/lang/String;
+
+    .line 78
+    .line 79
+    .line 80
+    move-result-object p3
+
+    .line 81
+    invoke-virtual {v1, p3}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    .line 82
+    .line 83
+    .line 84
+    invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    .line 85
+    .line 86
+    .line 87
+    move-result-object p3
+
+    .line 88
+    invoke-virtual {p3}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    .line 89
+    .line 90
+    .line 91
+    move-result-object p3
+
+    .line 92
+    :goto_5b
+    invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 93
+    .line 94
+    .line 95
+    move-result v1
+
+    .line 96
+    if-eqz v1, :cond_67
+
+    .line 97
+    .line 98
+    const-string p3, "chrome-native://newtab/"
+
+    .line 99
+    .line 100
+    invoke-virtual {v0, p3}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 101
+    .line 102
+    .line 103
+    move-result-object p3
+
+    .line 104
+    :cond_67
+    invoke-interface {v3, v4}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    .line 105
+    .line 106
+    .line 107
+    move-result v0
+
+    .line 108
+    if-eqz v0, :cond_72
+
+    .line 109
+    .line 110
+    const-string v0, "MobileBookmarkManagerReopenBookmarksInSameSession"
+
+    .line 111
+    .line 112
+    invoke-static {v0}, Lsrf;->a(Ljava/lang/String;)V
+
+    .line 113
+    .line 114
+    .line 115
+    :cond_72
+    invoke-static {p0}, Lorg/chromium/ui/base/DeviceFormFactor;->b(Landroid/content/Context;)Z
+
+    .line 116
+    .line 117
+    .line 118
+    move-result v0
+
+    .line 119
+    if-eqz v0, :cond_98
+
+    .line 120
+    .line 121
+    new-instance p0, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 122
+    .line 123
+    invoke-direct {p0, v2, p3}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 124
+    .line 125
+    .line 126
+    invoke-virtual {p2}, Lorg/chromium/chrome/browser/profiles/Profile;->i()Z
+
+    .line 127
+    .line 128
+    .line 129
+    move-result p2
+
+    .line 130
+    new-instance p3, Ltk0;
+
+    .line 131
+    .line 132
+    const/4 v0, 0x0
+
+    .line 133
+    invoke-direct {p3, p0, v0, v0}, Ltk0;-><init>(Lorg/chromium/content_public/browser/LoadUrlParams;Ljava/lang/Integer;Landroid/content/ComponentName;)V
+
+    .line 134
+    .line 135
+    .line 136
+    if-nez p1, :cond_8b
+
+    .line 137
+    .line 138
+    const/4 p0, -0x1
+
+    .line 139
+    goto :goto_8f
+
+    .line 140
+    :cond_8b
+    invoke-interface {p1}, Lorg/chromium/chrome/browser/tab/Tab;->getId()I
+
+    .line 141
+    .line 142
+    .line 143
+    move-result p0
+
+    .line 144
+    :goto_8f
+    const/4 p1, 0x2
+
+    .line 145
+    invoke-static {p3, p0, p1, p2}, Lor9;->b(Ltk0;IIZ)Landroid/content/Intent;
+
+================================================================================
+FILE: /content/classes_smali/hc8.smali
+MATCH LINE: 137
+    .line 30
+    move-result-object v2
+
+    .line 31
+    check-cast v2, Ljava/lang/Integer;
+
+    .line 32
+    .line 33
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    .line 34
+    .line 35
+    .line 36
+    move-result v2
+
+    .line 37
+    invoke-virtual {v0, v2}, Lejj;->q(I)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 38
+    .line 39
+    .line 40
+    move-result-object v3
+
+    .line 41
+    if-eqz v3, :cond_2f
+
+    .line 42
+    .line 43
+    const/4 p0, 0x3
+
+    .line 44
+    invoke-static {v2, p0, v0}, Ldkj;->j(IILejj;)V
+
+    .line 45
+    .line 46
+    .line 47
+    goto :goto_43
+
+    .line 48
+    :cond_2f
+    goto :goto_14
+
+    .line 49
+    :cond_30
+    invoke-virtual {p0}, Lorg/chromium/chrome/browser/actor/ActorTask;->d()Z
+
+    .line 50
+    .line 51
+    .line 52
+    move-result p0
+
+    .line 53
+    if-eqz p0, :cond_43
+
+    .line 54
+    .line 55
+    new-instance p0, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 56
+    .line 57
+    const-string v1, "chrome-native://newtab/"
+
+    .line 58
+    .line 59
+    const/4 v2, 0x0
+
+    .line 60
+    invoke-direct {p0, v2, v1}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 61
+    .line 62
+    .line 63
+    const/4 v1, 0x2
+
+    .line 64
+    const/4 v3, 0x0
+
+    .line 65
+    invoke-virtual {v0, p0, v1, v3, v2}, Lejj;->B(Lorg/chromium/content_public/browser/LoadUrlParams;ILorg/chromium/chrome/browser/tab/Tab;Z)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 66
+    .line 67
+    .line 68
+    :cond_43
+    :goto_43
+    iget-object p0, p1, Lic8;->c:Lra8;
+
+    .line 69
+    .line 70
+    const/4 v0, 0x1
+
+    .line 71
+    iget-byte v1, p1, Lic8;->d:B
+
+    .line 72
+    .line 73
+    invoke-interface {p0, v1, v0}, Lra8;->a(IZ)V
+
+    .line 74
+    .line 75
+    .line 76
+    invoke-virtual {p1}, Lic8;->a()V
+
+    .line 77
+    .line 78
+    .line 79
+    return-void
+.end method
+
+================================================================================
+FILE: /content/classes_smali/i72.smali
+MATCH LINE: 259
+    .line 84
+    goto :goto_58
+
+    .line 85
+    :cond_54
+    invoke-virtual {v0}, Lorg/chromium/chrome/browser/bookmarks/BookmarkBridge;->m()Lorg/chromium/components/bookmarks/BookmarkId;
+
+    .line 86
+    .line 87
+    .line 88
+    move-result-object v4
+
+    .line 89
+    :goto_58
+    if-nez v1, :cond_5d
+
+    .line 90
+    .line 91
+    move-object v13, v4
+
+    .line 92
+    move v7, v6
+
+    .line 93
+    goto :goto_5e
+
+    .line 94
+    :cond_5d
+    move-object v13, v4
+
+    .line 95
+    :goto_5e
+    if-eq v1, v9, :cond_8f
+
+    .line 96
+    .line 97
+    iget v1, v13, Lorg/chromium/components/bookmarks/BookmarkId;->b:I
+
+    .line 98
+    .line 99
+    if-eq v1, v9, :cond_8f
+
+    .line 100
+    .line 101
+    invoke-static/range {p1 .. p1}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 102
+    .line 103
+    .line 104
+    move-result-object v1
+
+    .line 105
+    invoke-virtual/range {p4 .. p4}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 106
+    .line 107
+    .line 108
+    move-result-object v3
+
+    .line 109
+    const-string v4, "chrome-native://newtab/"
+
+    .line 110
+    .line 111
+    invoke-virtual {v1, v4}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 112
+    .line 113
+    .line 114
+    move-result-object v1
+
+    .line 115
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 116
+    .line 117
+    .line 118
+    move-result v1
+
+    .line 119
+    if-eqz v1, :cond_82
+
+    .line 120
+    .line 121
+    const v1, 0x7f14102a
+
+    .line 122
+    .line 123
+    .line 124
+    move-object/from16 v3, p0
+
+    .line 125
+    .line 126
+    invoke-virtual {v3, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 127
+    .line 128
+    .line 129
+    move-result-object v1
+
+    .line 130
+    goto :goto_84
+
+    .line 131
+    :cond_82
+    move-object/from16 v1, p3
+
+    .line 132
+    .line 133
+    :goto_84
+    invoke-virtual {v0, v13}, Lorg/chromium/chrome/browser/bookmarks/BookmarkBridge;->k(Lorg/chromium/components/bookmarks/BookmarkId;)I
+
+    .line 134
+    .line 135
+    .line 136
+    move-result v3
+
+    .line 137
+    move-object/from16 v15, p4
+
+    .line 138
+    .line 139
+    invoke-virtual {v0, v13, v3, v1, v15}, Lorg/chromium/chrome/browser/bookmarks/BookmarkBridge;->a(Lorg/chromium/components/bookmarks/BookmarkId;ILjava/lang/String;Lorg/chromium/url/GURL;)Lorg/chromium/components/bookmarks/BookmarkId;
+
+    .line 140
+    .line 141
+    .line 142
+    move-result-object v0
+
+    .line 143
+    goto :goto_a4
+
+    .line 144
+    :cond_8f
+    move-object/from16 v15, p4
+
+    .line 145
+    .line 146
+    iget-wide v11, v0, Lorg/chromium/chrome/browser/bookmarks/BookmarkBridge;->c:J
+
+    .line 147
+    .line 148
+    const-wide/16 v0, 0x0
+
+    .line 149
+    .line 150
+    cmp-long v0, v11, v0
+
+    .line 151
+    .line 152
+    if-eqz v0, :cond_a3
+
+    .line 153
+    .line 154
+    const/4 v10, 0x1
+
+    .line 155
+    move-object/from16 v14, p3
+
+    .line 156
+
+================================================================================
+FILE: /content/classes_smali/org/chromium/chrome/browser/notifications/retention/RetentionNotificationPublisher.smali
+MATCH LINE: 470
+    .line 161
+    invoke-virtual {v0}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 162
+    .line 163
+    .line 164
+    move-result-object v0
+
+    .line 165
+    if-eqz v0, :cond_1a1
+
+    .line 166
+    .line 167
+    invoke-virtual {v4}, Ldn3;->g4()Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 168
+    .line 169
+    .line 170
+    move-result-object v0
+
+    .line 171
+    invoke-interface {v0}, Lorg/chromium/chrome/browser/tab/Tab;->getUrl()Lorg/chromium/url/GURL;
+
+    .line 172
+    .line 173
+    .line 174
+    move-result-object v0
+
+    .line 175
+    invoke-virtual {v0}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 176
+    .line 177
+    .line 178
+    move-result-object v0
+
+    .line 179
+    invoke-static {v0}, Lxhl;->k(Ljava/lang/String;)Z
+
+    .line 180
+    .line 181
+    .line 182
+    move-result v0
+
+    .line 183
+    if-nez v0, :cond_1a1
+
+    .line 184
+    .line 185
+    const/4 v0, 0x0
+
+    .line 186
+    invoke-virtual {v4, v0}, Ldn3;->p0(Z)Lozi;
+
+    .line 187
+    .line 188
+    .line 189
+    move-result-object v0
+
+    .line 190
+    const-string v1, "chrome-native://newtab/"
+
+    .line 191
+    .line 192
+    const/4 v2, 0x2
+
+    .line 193
+    invoke-interface {v0, v2, v1}, Lozi;->j(ILjava/lang/String;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 194
+    .line 195
+    .line 196
+    return-void
+
+    .line 197
+    :sswitch_c4
+    invoke-virtual {v2, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 198
+    .line 199
+    .line 200
+    move-result v0
+
+    .line 201
+    if-eqz v0, :cond_1a1
+
+    .line 202
+    .line 203
+    goto :goto_ef
+
+    .line 204
+    :sswitch_cb
+    invoke-virtual {v2, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 205
+    .line 206
+    .line 207
+    move-result v0
+
+    .line 208
+    if-eqz v0, :cond_1a1
+
+    .line 209
+    .line 210
+    goto :goto_df
+
+    .line 211
+    :sswitch_d2
+    invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 212
+    .line 213
+    .line 214
+    move-result v0
+
+    .line 215
+    if-eqz v0, :cond_1a1
+
+    .line 216
+    .line 217
+    goto :goto_df
+
+    .line 218
+    :sswitch_d9
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 219
+    .line 220
+    .line 221
+    move-result v0
+
+    .line 222
+    if-eqz v0, :cond_1a1
+
+    .line 223
+    .line 224
+    :goto_df
+    invoke-virtual {v4}, Lx52;->X4()Leq2;
+
+    .line 225
+    .line 226
+    .line 227
+    move-result-object v0
+
+    .line 228
+    iget-object v1, v0, Leq2;->a0:Landroid/widget/ImageButton;
+
+    .line 229
+    .line 230
+    invoke-virtual {v0, v1}, Leq2;->onClick(Landroid/view/View;)V
+
+    .line 231
+    .line 232
+    .line 233
+    return-void
+
+    .line 234
+    :sswitch_e9
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+
+================================================================================
+FILE: /content/classes2_smali/y7j.smali
+MATCH LINE: 145
+    invoke-interface {p1, v3}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->a1(I)Ljava/util/List;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object p1
+
+    .line 28
+    invoke-interface {v2}, Lorg/chromium/chrome/browser/tab/Tab;->c()Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v3
+
+    .line 32
+    invoke-static {v3}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v3
+
+    .line 36
+    invoke-static {v1, p1}, Lql;->k(ILjava/util/List;)Ljava/lang/Object;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object p1
+
+    .line 40
+    check-cast p1, Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 41
+    .line 42
+    iget-object p0, p0, Lg8j;->G:Lpzi;
+
+    .line 43
+    .line 44
+    invoke-interface {v2}, Lorg/chromium/chrome/browser/tab/Tab;->isIncognito()Z
+
+    .line 45
+    .line 46
+    .line 47
+    move-result v2
+
+    .line 48
+    invoke-interface {p0, v2}, Lpzi;->p0(Z)Lozi;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object p0
+
+    .line 52
+    new-instance v2, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 53
+    .line 54
+    const-string v4, "chrome-native://newtab/"
+
+    .line 55
+    .line 56
+    invoke-virtual {v3, v4}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 57
+    .line 58
+    .line 59
+    move-result-object v3
+
+    .line 60
+    invoke-direct {v2, v0, v3}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 61
+    .line 62
+    .line 63
+    const/16 v0, 0xd
+
+    .line 64
+    .line 65
+    invoke-interface {p0, v2, v0, p1}, Lozi;->c(Lorg/chromium/content_public/browser/LoadUrlParams;ILorg/chromium/chrome/browser/tab/Tab;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 66
+    .line 67
+    .line 68
+    invoke-static {v1}, Lqwj;->a(I)Ljava/lang/String;
+
+    .line 69
+    .line 70
+    .line 71
+    move-result-object p0
+
+    .line 72
+    const-string p1, "MobileNewTabOpened."
+
+    .line 73
+    .line 74
+    invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 75
+    .line 76
+    .line 77
+    move-result-object p0
+
+    .line 78
+    invoke-static {p0}, Lsrf;->a(Ljava/lang/String;)V
+
+    .line 79
+    .line 80
+    .line 81
+    return-void
+
+    .line 82
+    :pswitch_51
+    iget-object p1, p0, Lg8j;->E:Lejj;
+
+    .line 83
+    .line 84
+    invoke-virtual {p0}, Lg8j;->a()Lq0j;
+
+    .line 85
+    .line 86
+    .line 87
+    move-result-object v2
+
+    .line 88
+    if-eqz v2, :cond_65
+
+    .line 89
+    .line 90
+    iget-object v2, v2, Lq0j;->H:Ly1d;
+
+    .line 91
+    .line 92
+    iget-object v2, v2, Ly1d;->v:Ljava/lang/Object;
+
+    .line 93
+    .line 94
+    check-cast v2, Ljava/lang/Boolean;
+
+    .line 95
+    .line 96
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 97
+    .line 98
+    .line 99
+    move-result v2
+
+    .line 100
+    if-nez v2, :cond_d6
+
+    .line 101
+    .line 102
+    :cond_65
+    invoke-virtual {p1}, Lejj;->j()Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 103
+    .line 104
+
+================================================================================
+FILE: /content/classes2_smali/c0b.smali
+MATCH LINE: 121
+
+    .line 12
+    .line 13
+    invoke-static {}, Lhj9;->b()Z
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v0
+
+    .line 17
+    if-eqz v0, :cond_23
+
+    .line 18
+    .line 19
+    invoke-static {}, Lr9c;->a()Lpc2;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    invoke-virtual {p0}, Lzv7;->q4()Landroidx/fragment/app/FragmentActivity;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v1
+
+    .line 27
+    const/16 v5, 0xe
+
+    .line 28
+    .line 29
+    const/4 v2, 0x1
+
+    .line 30
+    const/4 v3, 0x0
+
+    .line 31
+    const/4 v4, 0x0
+
+    .line 32
+    invoke-virtual/range {v0 .. v5}, Lpc2;->b(Landroid/app/Activity;ZLandroid/os/Bundle;Landroid/os/Bundle;I)Z
+
+    .line 33
+    .line 34
+    .line 35
+    return-void
+
+    .line 36
+    :cond_23
+    new-instance p0, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 37
+    .line 38
+    const/4 v0, 0x0
+
+    .line 39
+    const-string v4, "chrome://newtab/"
+
+    .line 40
+    .line 41
+    invoke-direct {p0, v0, v4}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 42
+    .line 43
+    .line 44
+    new-instance v0, Ltk0;
+
+    .line 45
+    .line 46
+    invoke-direct {v0, p0, v2, v2}, Ltk0;-><init>(Lorg/chromium/content_public/browser/LoadUrlParams;Ljava/lang/Integer;Landroid/content/ComponentName;)V
+
+    .line 47
+    .line 48
+    .line 49
+    const/4 p0, 0x2
+
+    .line 50
+    invoke-static {v0, v1, p0, v3}, Lor9;->b(Ltk0;IIZ)Landroid/content/Intent;
+
+    .line 51
+    .line 52
+    .line 53
+    move-result-object p0
+
+    .line 54
+    invoke-static {v2, p0, v2}, Lor9;->E(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
+
+    .line 55
+    .line 56
+    .line 57
+    return-void
+
+    .line 58
+    :pswitch_39
+    sget-object v0, Lorg/chromium/chrome/browser/sync/settings/ManageSyncSettings;->V0:Le0b;
+
+    .line 59
+    .line 60
+    iget-object v0, p0, Lorg/chromium/chrome/browser/settings/ChromeBaseSettingsFragment;->H0:Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 61
+    .line 62
+    const/16 v1, 0x34
+
+    .line 63
+    .line 64
+    invoke-static {v1, v0}, LJ/N;->OO(ILjava/lang/Object;)Ljava/lang/Object;
+
+    .line 65
+    .line 66
+    .line 67
+    move-result-object v0
+
+    .line 68
+    check-cast v0, Lorg/chromium/components/regional_capabilities/RegionalCapabilitiesService;
+
+    .line 69
+    .line 70
+    iget-wide v0, v0, Lorg/chromium/components/regional_capabilities/RegionalCapabilitiesService;->a:J
+
+    .line 71
+    .line 72
+    const/16 v4, 0x5d
+
+    .line 73
+    .line 74
+    invoke-static {v4, v0, v1}, LJ/N;->ZJ(IJ)Z
+
+    .line 75
+    .line 76
+    .line 77
+    move-result v0
+
+    .line 78
+    if-eqz v0, :cond_66
+
+    .line 79
+    .line 80
+    invoke-virtual {p0}, Lorg/chromium/chrome/browser/settings/ChromeBaseSettingsFragment;->z3()Landroid/content/Context;
+
+    .line 81
+    .line 82
+    .line 83
+    move-result-object v0
+
+    .line 84
+    invoke-static {v0}, Lorg/chromium/chrome/browser/settings/SettingsNavigationFactory;->a(Landroid/content/Context;)Lz9h;
+
+    .line 85
+    .line 86
+    .line 87
+    move-result-object v0
+
+    .line 88
+    invoke-virtual {p0}, Lorg/chromium/chrome/browser/settings/ChromeBaseSettingsFragment;->z3()Landroid/content/Context;
+
+
+================================================================================
+FILE: /content/classes2_smali/r92.smali
+MATCH LINE: 225
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    .line 25
+    .line 26
+    .line 27
+    move-result v0
+
+    .line 28
+    iget v2, p0, Lorg/chromium/chrome/browser/ntp/IncognitoNewTabPageView;->y:I
+
+    .line 29
+    .line 30
+    if-ne v0, v2, :cond_29
+
+    .line 31
+    .line 32
+    iget-object v0, p0, Lorg/chromium/chrome/browser/ntp/IncognitoNewTabPageView;->w:Lorg/chromium/chrome/browser/ntp/NewTabPageScrollView;
+
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/view/View;->getScrollY()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    iget p0, p0, Lorg/chromium/chrome/browser/ntp/IncognitoNewTabPageView;->z:I
+
+    .line 39
+    .line 40
+    if-eq v0, p0, :cond_2a
+
+    .line 41
+    .line 42
+    :cond_29
+    const/4 v1, 0x1
+
+    .line 43
+    :cond_2a
+    return v1
+.end method
+
+.method public final getUrl()Ljava/lang/String;
+    .registers 2
+
+    .line 1
+    iget-object p0, p0, Lr92;->D:Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 2
+    .line 3
+    invoke-static {p0}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    const-string v0, "chrome-native://newtab/"
+
+    .line 8
+    .line 9
+    invoke-virtual {p0, v0}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object p0
+
+    .line 13
+    return-object p0
+.end method
+
+.method public final h(Landroid/graphics/Canvas;)V
+    .registers 2
+
+    .line 1
+    iget-object p0, p0, Lr92;->H:Lorg/chromium/chrome/browser/ntp/IncognitoNewTabPageView;
+
+    .line 2
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-static {p0}, Loxl;->i(Landroid/view/View;)V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-virtual {p0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
+
+    .line 10
+    .line 11
+    .line 12
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result p1
+
+    .line 16
+    iput p1, p0, Lorg/chromium/chrome/browser/ntp/IncognitoNewTabPageView;->x:I
+
+    .line 17
+    .line 18
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    .line 19
+    .line 20
+    .line 21
+    move-result p1
+
+    .line 22
+    iput p1, p0, Lorg/chromium/chrome/browser/ntp/IncognitoNewTabPageView;->y:I
+
+    .line 23
+    .line 24
+    iget-object p1, p0, Lorg/chromium/chrome/browser/ntp/IncognitoNewTabPageView;->w:Lorg/chromium/chrome/browser/ntp/NewTabPageScrollView;
+
+    .line 25
+    .line 26
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result p1
+
+    .line 30
+    iput p1, p0, Lorg/chromium/chrome/browser/ntp/IncognitoNewTabPageView;->z:I
+
+    .line 31
+    .line 32
+    return-void
+.end method
+
+.method public final v()Ljava/lang/String;
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lr92;->G:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+================================================================================
+FILE: /content/classes2_smali/r3j.smali
+MATCH LINE: 101
+
+    .line 11
+    .line 12
+    iput-object p5, p0, Lr3j;->e:Lh9j;
+
+    .line 13
+    .line 14
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .registers 6
+
+    .line 1
+    iget-object v0, p0, Lr3j;->d:Ljava/util/function/Supplier;
+
+    .line 2
+    .line 3
+    invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    check-cast v0, Lorg/chromium/chrome/browser/tabmodel/TabModel;
+
+    .line 8
+    .line 9
+    invoke-interface {v0}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->H0()Lozi;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v1
+
+    .line 13
+    invoke-interface {v0}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->c()Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v2
+
+    .line 17
+    invoke-static {v2}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v2
+
+    .line 21
+    new-instance v3, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 22
+    .line 23
+    const-string v4, "chrome-native://newtab/"
+
+    .line 24
+    .line 25
+    invoke-virtual {v2, v4}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v2
+
+    .line 29
+    const/4 v4, 0x0
+
+    .line 30
+    invoke-direct {v3, v4, v2}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 31
+    .line 32
+    .line 33
+    const/4 v2, 0x5
+
+    .line 34
+    const/4 v4, 0x0
+
+    .line 35
+    invoke-interface {v1, v3, v2, v4}, Lozi;->c(Lorg/chromium/content_public/browser/LoadUrlParams;ILorg/chromium/chrome/browser/tab/Tab;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v1
+
+    .line 39
+    if-eqz v1, :cond_4e
+
+    .line 40
+    .line 41
+    invoke-interface {v0, v1}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->s(Lorg/chromium/chrome/browser/tab/Tab;)V
+
+    .line 42
+    .line 43
+    .line 44
+    iget-object v2, p0, Lr3j;->b:Ljava/util/function/Supplier;
+
+    .line 45
+    .line 46
+    invoke-interface {v2}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v2
+
+    .line 50
+    check-cast v2, Lu1c;
+
+    .line 51
+    .line 52
+    invoke-interface {v1}, Lorg/chromium/chrome/browser/tab/Tab;->getTabGroupId()Lorg/chromium/base/Token;
+
+    .line 53
+    .line 54
+    .line 55
+    move-result-object v3
+
+    .line 56
+    if-eqz v3, :cond_4e
+
+    .line 57
+    .line 58
+    if-eqz v2, :cond_4e
+
+    .line 59
+    .line 60
+    new-instance v4, Lq3j;
+
+    .line 61
+    .line 62
+    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+
+    .line 63
+    .line 64
+    .line 65
+    iput-object p0, v4, Lq3j;->u:Lr3j;
+
+    .line 66
+    .line 67
+    iput-object v1, v4, Lq3j;->v:Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 68
+    .line 69
+    new-instance v1, Lp3j;
+
+    .line 70
+    .line 71
+    iget-object p0, p0, Lr3j;->a:Landroid/content/Context;
+
+    .line 72
+    .line 73
+
+================================================================================
+FILE: /content/classes2_smali/ttd.smali
+MATCH LINE: 45
+.class public final synthetic Lttd;
+.super Ljava/lang/Object;
+.source "chromium-ChromePublic.apk-stable-430005804"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public synthetic u:Lvtd;
+
+
+# virtual methods
+.method public final run()V
+    .registers 10
+
+    .line 1
+    iget-object p0, p0, Lttd;->u:Lvtd;
+
+    .line 2
+    .line 3
+    iget-object v0, p0, Lvtd;->g:Lwu3;
+
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 6
+    .line 7
+    .line 8
+    iget-object v0, p0, Lvtd;->f:Ljava/lang/String;
+
+    .line 9
+    .line 10
+    const/4 v1, 0x0
+
+    .line 11
+    const/4 v2, 0x1
+
+    .line 12
+    if-eqz v0, :cond_1d
+
+    .line 13
+    .line 14
+    const-string v3, "chrome-native://newtab/"
+
+    .line 15
+    .line 16
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 17
+    .line 18
+    .line 19
+    move-result v3
+
+    .line 20
+    if-nez v3, :cond_1b
+
+    .line 21
+    .line 22
+    invoke-static {v0}, Lxhl;->k(Ljava/lang/String;)Z
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v0
+
+    .line 26
+    if-eqz v0, :cond_1d
+
+    .line 27
+    .line 28
+    :cond_1b
+    move v0, v2
+
+    .line 29
+    goto :goto_1e
+
+    .line 30
+    :cond_1d
+    move v0, v1
+
+    .line 31
+    :goto_1e
+    iget-object v3, p0, Lvtd;->g:Lwu3;
+
+    .line 32
+    .line 33
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 34
+    .line 35
+    .line 36
+    invoke-static {}, Lf92;->d()Lf92;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v3
+
+    .line 40
+    invoke-virtual {v3}, Lf92;->c()I
+
+    .line 41
+    .line 42
+    .line 43
+    move-result v3
+
+    .line 44
+    const/4 v4, 0x3
+
+    .line 45
+    const/4 v5, 0x2
+
+    .line 46
+    if-eq v3, v5, :cond_33
+
+    .line 47
+    .line 48
+    if-eq v3, v4, :cond_33
+
+    .line 49
+    .line 50
+    move v3, v1
+
+    .line 51
+    goto :goto_34
+
+    .line 52
+    :cond_33
+    move v3, v2
+
+    .line 53
+    :goto_34
+    iget-object v6, p0, Lvtd;->g:Lwu3;
+
+    .line 54
+    .line 55
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 56
+    .line 57
+    .line 58
+    invoke-static {}, Lf92;->d()Lf92;
+
+================================================================================
+FILE: /content/classes2_smali/wx.smali
+MATCH LINE: 72
+
+# virtual methods
+.method public final S0(Lorg/chromium/chrome/browser/tab/TabImpl;)V
+    .registers 2
+
+    .line 1
+    const/4 p1, 0x0
+
+    .line 2
+    sput-object p1, Lxx;->c:Lxx;
+
+    .line 3
+    .line 4
+    iget-object p0, p0, Lwx;->u:Lxx;
+
+    .line 5
+    .line 6
+    iput-object p1, p0, Lxx;->a:Lorg/chromium/chrome/browser/tab/TabImpl;
+
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public final n(Lorg/chromium/chrome/browser/tab/Tab;)V
+    .registers 5
+
+    .line 1
+    check-cast p1, Lorg/chromium/chrome/browser/tab/TabImpl;
+
+    .line 2
+    .line 3
+    iget-object v0, p1, Lorg/chromium/chrome/browser/tab/TabImpl;->c:Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 4
+    .line 5
+    invoke-static {v0}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    invoke-virtual {p1}, Lorg/chromium/chrome/browser/tab/TabImpl;->getUrl()Lorg/chromium/url/GURL;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v1
+
+    .line 13
+    invoke-virtual {v1}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v1
+
+    .line 17
+    const-string v2, "chrome-native://newtab/"
+
+    .line 18
+    .line 19
+    invoke-virtual {v0, v2}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v0
+
+    .line 27
+    if-nez v0, :cond_37
+
+    .line 28
+    .line 29
+    invoke-virtual {p1}, Lorg/chromium/chrome/browser/tab/TabImpl;->getUrl()Lorg/chromium/url/GURL;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v0
+
+    .line 33
+    invoke-virtual {v0}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v0
+
+    .line 37
+    const-string v1, ""
+
+    .line 38
+    .line 39
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 40
+    .line 41
+    .line 42
+    move-result v0
+
+    .line 43
+    if-nez v0, :cond_37
+
+    .line 44
+    .line 45
+    new-instance v0, Lxx;
+
+    .line 46
+    .line 47
+    invoke-direct {v0}, Lxx;-><init>()V
+
+    .line 48
+    .line 49
+    .line 50
+    sput-object v0, Lxx;->c:Lxx;
+
+    .line 51
+    .line 52
+    iget-object p0, p0, Lwx;->u:Lxx;
+
+    .line 53
+    .line 54
+    iput-object p1, p0, Lxx;->a:Lorg/chromium/chrome/browser/tab/TabImpl;
+
+    .line 55
+    .line 56
+    :cond_37
+    return-void
+.end method
+
+================================================================================
+FILE: /content/classes2_smali/jgl.smali
+MATCH LINE: 94
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object p0
+
+    .line 13
+    goto :goto_11
+
+    .line 14
+    :cond_d
+    invoke-static {}, Ljgl;->c()Lhgl;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object p0
+
+    .line 18
+    :goto_11
+    return-object p0
+.end method
+
+.method public static b()Lhgl;
+    .registers 4
+
+    .line 1
+    sget-object v0, Ljgl;->b:Lhgl;
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_23
+
+    .line 4
+    .line 5
+    new-instance v0, Lhgl;
+
+    .line 6
+    .line 7
+    invoke-direct {v0}, Lhgl;-><init>()V
+
+    .line 8
+    .line 9
+    .line 10
+    new-instance v1, Ligl;
+
+    .line 11
+    .line 12
+    const/4 v2, 0x0
+
+    .line 13
+    invoke-direct {v1, v2}, Ligl;-><init>(B)V
+
+    .line 14
+    .line 15
+    .line 16
+    iget-object v2, v0, Lhgl;->a:Ljava/util/HashMap;
+
+    .line 17
+    .line 18
+    const-string v3, "chrome-native://newtab/"
+
+    .line 19
+    .line 20
+    invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    .line 23
+    new-instance v1, Ligl;
+
+    .line 24
+    .line 25
+    const/4 v3, 0x1
+
+    .line 26
+    invoke-direct {v1, v3}, Ligl;-><init>(B)V
+
+    .line 27
+    .line 28
+    .line 29
+    const-string v3, "chrome-native://bookmarks/"
+
+    .line 30
+    .line 31
+    invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 32
+    .line 33
+    .line 34
+    sput-object v0, Ljgl;->b:Lhgl;
+
+    .line 35
+    .line 36
+    :cond_23
+    return-object v0
+.end method
+
+.method public static c()Lhgl;
+    .registers 4
+
+    .line 1
+    sget-object v0, Ljgl;->a:Lhgl;
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_2e
+
+    .line 4
+    .line 5
+    new-instance v0, Lhgl;
+
+    .line 6
+    .line 7
+    invoke-direct {v0}, Lhgl;-><init>()V
+
+    .line 8
+    .line 9
+    .line 10
+    new-instance v1, Ligl;
+
+    .line 11
+    .line 12
+    const/4 v2, 0x2
+
+    .line 13
+    invoke-direct {v1, v2}, Ligl;-><init>(B)V
+
+    .line 14
+    .line 15
+    .line 16
+    iget-object v2, v0, Lhgl;->a:Ljava/util/HashMap;
+
+    .line 17
+    .line 18
+    const-string v3, "chrome-native://newtab/"
+
+    .line 19
+    .line 20
+    invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    .line 23
+    new-instance v1, Ligl;
+
+    .line 24
+    .line 25
+    const/4 v3, 0x3
+
+    .line 26
+    invoke-direct {v1, v3}, Ligl;-><init>(B)V
+
+    .line 27
+    .line 28
+    .line 29
+    const-string v3, "chrome-native://bookmarks/"
+
+    .line 30
+    .line 31
+
+================================================================================
+FILE: /content/classes2_smali/jgl.smali
+MATCH LINE: 169
+    .line 26
+    invoke-direct {v1, v3}, Ligl;-><init>(B)V
+
+    .line 27
+    .line 28
+    .line 29
+    const-string v3, "chrome-native://bookmarks/"
+
+    .line 30
+    .line 31
+    invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 32
+    .line 33
+    .line 34
+    sput-object v0, Ljgl;->b:Lhgl;
+
+    .line 35
+    .line 36
+    :cond_23
+    return-object v0
+.end method
+
+.method public static c()Lhgl;
+    .registers 4
+
+    .line 1
+    sget-object v0, Ljgl;->a:Lhgl;
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_2e
+
+    .line 4
+    .line 5
+    new-instance v0, Lhgl;
+
+    .line 6
+    .line 7
+    invoke-direct {v0}, Lhgl;-><init>()V
+
+    .line 8
+    .line 9
+    .line 10
+    new-instance v1, Ligl;
+
+    .line 11
+    .line 12
+    const/4 v2, 0x2
+
+    .line 13
+    invoke-direct {v1, v2}, Ligl;-><init>(B)V
+
+    .line 14
+    .line 15
+    .line 16
+    iget-object v2, v0, Lhgl;->a:Ljava/util/HashMap;
+
+    .line 17
+    .line 18
+    const-string v3, "chrome-native://newtab/"
+
+    .line 19
+    .line 20
+    invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    .line 23
+    new-instance v1, Ligl;
+
+    .line 24
+    .line 25
+    const/4 v3, 0x3
+
+    .line 26
+    invoke-direct {v1, v3}, Ligl;-><init>(B)V
+
+    .line 27
+    .line 28
+    .line 29
+    const-string v3, "chrome-native://bookmarks/"
+
+    .line 30
+    .line 31
+    invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 32
+    .line 33
+    .line 34
+    new-instance v1, Ligl;
+
+    .line 35
+    .line 36
+    const/4 v3, 0x4
+
+    .line 37
+    invoke-direct {v1, v3}, Ligl;-><init>(B)V
+
+    .line 38
+    .line 39
+    .line 40
+    const-string v3, "chrome-native://history/"
+
+    .line 41
+    .line 42
+    invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 43
+    .line 44
+    .line 45
+    sput-object v0, Ljgl;->a:Lhgl;
+
+    .line 46
+    .line 47
+    :cond_2e
+    return-object v0
+.end method
+
+================================================================================
+FILE: /content/classes2_smali/inc.smali
+MATCH LINE: 315
+    .line 106
+    :goto_69
+    if-eqz p0, :cond_93
+
+    .line 107
+    .line 108
+    new-instance v0, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 109
+    .line 110
+    invoke-virtual {p0}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 111
+    .line 112
+    .line 113
+    move-result-object p0
+
+    .line 114
+    invoke-direct {v0, v3, p0}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 115
+    .line 116
+    .line 117
+    invoke-virtual {p1, v0, v3}, Ltmc;->c(Lorg/chromium/content_public/browser/LoadUrlParams;Z)V
+
+    .line 118
+    .line 119
+    .line 120
+    goto :goto_93
+
+    .line 121
+    :pswitch_78
+    iget-boolean p1, p0, Lwc2;->u:Z
+
+    .line 122
+    .line 123
+    if-eqz p1, :cond_93
+
+    .line 124
+    .line 125
+    iget-object p1, p0, Lwc2;->k:Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 126
+    .line 127
+    invoke-static {p1}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 128
+    .line 129
+    .line 130
+    move-result-object p1
+
+    .line 131
+    iget-object p0, p0, Lwc2;->a:Ltmc;
+
+    .line 132
+    .line 133
+    new-instance v0, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 134
+    .line 135
+    const-string v1, "chrome-native://newtab/"
+
+    .line 136
+    .line 137
+    invoke-virtual {p1, v1}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 138
+    .line 139
+    .line 140
+    move-result-object p1
+
+    .line 141
+    invoke-direct {v0, v3, p1}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 142
+    .line 143
+    .line 144
+    const/4 p1, 0x1
+
+    .line 145
+    invoke-virtual {p0, v0, p1}, Ltmc;->c(Lorg/chromium/content_public/browser/LoadUrlParams;Z)V
+
+    .line 146
+    .line 147
+    .line 148
+    :cond_93
+    :goto_93
+    return-void
+
+    .line 149
+    :pswitch_data_94
+    .packed-switch 0x0
+        :pswitch_78
+        :pswitch_1b
+        :pswitch_14
+    .end packed-switch
+.end method
+
+================================================================================
+FILE: /content/classes2_smali/f92.smali
+MATCH LINE: 455
+    .line 22
+    .line 23
+    invoke-virtual {v1, v0}, Ld2d;->b(Ljava/lang/Object;)Z
+
+    .line 24
+    .line 25
+    .line 26
+    invoke-static {}, Lorg/chromium/chrome/browser/partnercustomizations/PartnerBrowserCustomizations;->b()Lorg/chromium/chrome/browser/partnercustomizations/PartnerBrowserCustomizations;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v1
+
+    .line 30
+    iput-object v0, v1, Lorg/chromium/chrome/browser/partnercustomizations/PartnerBrowserCustomizations;->e:Lf92;
+
+    .line 31
+    .line 32
+    sput-object v0, Lf92;->b:Lf92;
+
+    .line 33
+    .line 34
+    :cond_21
+    return-object v0
+.end method
+
+.method public static e(Z)Lorg/chromium/url/GURL;
+    .registers 3
+
+    .line 1
+    if-eqz p0, :cond_7
+
+    .line 2
+    .line 3
+    invoke-static {}, Ljgl;->b()Lhgl;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    goto :goto_b
+
+    .line 8
+    :cond_7
+    invoke-static {}, Ljgl;->c()Lhgl;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object p0
+
+    .line 12
+    :goto_b
+    new-instance v0, Lorg/chromium/url/GURL;
+
+    .line 13
+    .line 14
+    const-string v1, "chrome-native://newtab/"
+
+    .line 15
+    .line 16
+    invoke-virtual {p0, v1}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object p0
+
+    .line 20
+    invoke-direct {v0, p0}, Lorg/chromium/url/GURL;-><init>(Ljava/lang/String;)V
+
+    .line 21
+    .line 22
+    .line 23
+    return-object v0
+.end method
+
+.method public static i()Z
+    .registers 1
+
+    .line 1
+    invoke-static {}, Lorg/chromium/base/DeviceInfo;->d()Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    if-eqz v0, :cond_e
+
+    .line 6
+    .line 7
+    sget-object v0, Lsq3;->T4:Lww1;
+
+    .line 8
+    .line 9
+    invoke-virtual {v0}, Lww1;->d()Z
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    if-nez v0, :cond_2c
+
+    .line 14
+    .line 15
+    :cond_e
+    sget-object v0, Lsq3;->R4:Lww1;
+
+    .line 16
+    .line 17
+    invoke-virtual {v0}, Lww1;->d()Z
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v0
+
+    .line 21
+    if-eqz v0, :cond_2c
+
+    .line 22
+    .line 23
+    sget-object v0, Lsq3;->Q4:Lww1;
+
+    .line 24
+    .line 25
+    invoke-virtual {v0}, Lww1;->d()Z
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v0
+
+    .line 29
+    invoke-static {v0}, Lorg/chromium/chrome/browser/partnercustomizations/PartnerBrowserCustomizations;->d(Z)Z
+
+    .line 30
+    .line 31
+    .line 32
+    move-result v0
+
+    .line 33
+    if-eqz v0, :cond_2c
+
+    .line 34
+    .line 35
+    sget-object v0, Lhq4;->a:Landroid/content/Context;
+
+    .line 36
+    .line 37
+    invoke-static {v0}, Lzx1;->b(Landroid/content/Context;)Z
+
+    .line 38
+
+================================================================================
+FILE: /content/classes2_smali/qzi.smali
+MATCH LINE: 32
+.class public abstract Lqzi;
+.super Ljava/lang/Object;
+.source "chromium-ChromePublic.apk-stable-430005804"
+
+
+# direct methods
+.method public static a(Lozi;Lorg/chromium/chrome/browser/profiles/Profile;I)V
+    .registers 5
+
+    .line 1
+    const-string v0, "TabCreator.launchNtp"
+
+    .line 2
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    :try_start_3
+    invoke-static {v0, v1}, Lorg/chromium/base/TraceEvent;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-static {p1}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p1
+
+    .line 11
+    const-string v1, "chrome-native://newtab/"
+
+    .line 12
+    .line 13
+    invoke-virtual {p1, v1}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object p1
+
+    .line 17
+    invoke-interface {p0, p2, p1}, Lozi;->j(ILjava/lang/String;)Lorg/chromium/chrome/browser/tab/Tab;
+    :try_end_13
+    .catchall {:try_start_3 .. :try_end_13} :catchall_17
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-static {v0}, Lorg/chromium/base/TraceEvent;->b(Ljava/lang/String;)V
+
+    .line 21
+    .line 22
+    .line 23
+    return-void
+
+    .line 24
+    :catchall_17
+    move-exception p0
+
+    .line 25
+    invoke-static {v0}, Lorg/chromium/base/TraceEvent;->b(Ljava/lang/String;)V
+
+    .line 26
+    .line 27
+    .line 28
+    throw p0
+.end method
+
+================================================================================
+FILE: /content/classes2_smali/uc2.smali
+MATCH LINE: 2444
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    .line 39
+    .line 40
+    .line 41
+    move-result v0
+
+    .line 42
+    iget v1, p0, Ly82;->O:I
+
+    .line 43
+    .line 44
+    if-ne v0, v1, :cond_35
+
+    .line 45
+    .line 46
+    invoke-virtual {p0}, Ly82;->d()I
+
+    .line 47
+    .line 48
+    .line 49
+    move-result v0
+
+    .line 50
+    iget p0, p0, Ly82;->P:I
+
+    .line 51
+    .line 52
+    if-eq v0, p0, :cond_36
+
+    .line 53
+    .line 54
+    :cond_35
+    const/4 v2, 0x1
+
+    .line 55
+    :cond_36
+    return v2
+.end method
+
+.method public final getUrl()Ljava/lang/String;
+    .registers 2
+
+    .line 1
+    iget-object p0, p0, Luc2;->u:Lorg/chromium/chrome/browser/tab/TabImpl;
+
+    .line 2
+    .line 3
+    iget-object p0, p0, Lorg/chromium/chrome/browser/tab/TabImpl;->c:Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 4
+    .line 5
+    invoke-static {p0}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object p0
+
+    .line 9
+    const-string v0, "chrome-native://newtab/"
+
+    .line 10
+    .line 11
+    invoke-virtual {p0, v0}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p0
+
+    .line 15
+    return-object p0
+.end method
+
+.method public final h(Landroid/graphics/Canvas;)V
+    .registers 6
+
+    .line 1
+    iget-object v0, p0, Luc2;->J:Lwc2;
+
+    .line 2
+    .line 3
+    iget-object v1, v0, Lwc2;->B:Lwua;
+
+    .line 4
+    .line 5
+    if-eqz v1, :cond_f
+
+    .line 6
+    .line 7
+    iget-object v1, v1, Lwua;->b:Lorg/chromium/ui/modelutil/PropertyModel;
+
+    .line 8
+    .line 9
+    sget-object v2, Lyua;->f:Libf;
+
+    .line 10
+    .line 11
+    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    .line 12
+    .line 13
+    invoke-virtual {v1, v2, v3}, Lorg/chromium/ui/modelutil/PropertyModel;->s(Libf;Ljava/lang/Object;)V
+
+    .line 14
+    .line 15
+    .line 16
+    :cond_f
+    const/4 v1, 0x0
+
+    .line 17
+    iput-boolean v1, v0, Lwc2;->Z:Z
+
+    .line 18
+    .line 19
+    iput-boolean v1, v0, Lwc2;->a0:Z
+
+    .line 20
+    .line 21
+    iget-object p0, p0, Luc2;->K:Lw82;
+
+    .line 22
+    .line 23
+    iget-object v0, p0, Lw82;->n:Lqb7;
+
+    .line 24
+    .line 25
+    invoke-static {v0}, Loxl;->i(Landroid/view/View;)V
+
+    .line 26
+    .line 27
+    .line 28
+    invoke-virtual {v0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
+
+    .line 29
+    .line 30
+    .line 31
+    iget-object p0, p0, Lw82;->l:Ly82;
+
+    .line 32
+    .line 33
+    iget-object p1, p0, Ly82;->u:Lw82;
+
+    .line 34
+    .line 35
+    iget-object v0, p1, Lw82;->n:Lqb7;
+
+    .line 36
+    .line 37
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    iput v0, p0, Ly82;->N:I
+
+
+================================================================================
+FILE: /content/classes2_smali/or9.smali
+MATCH LINE: 2275
+    invoke-virtual {v1, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 27
+    .line 28
+    .line 29
+    invoke-static {v1}, Lrr9;->a(Landroid/content/Intent;)V
+
+    .line 30
+    .line 31
+    .line 32
+    return-object v1
+.end method
+
+.method public static g(Landroid/content/Context;Z)Landroid/content/Intent;
+    .registers 5
+
+    .line 1
+    if-eqz p1, :cond_7
+
+    .line 2
+    .line 3
+    invoke-static {}, Ljgl;->b()Lhgl;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    goto :goto_b
+
+    .line 8
+    :cond_7
+    invoke-static {}, Ljgl;->c()Lhgl;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    :goto_b
+    new-instance v1, Landroid/content/Intent;
+
+    .line 13
+    .line 14
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+
+    .line 15
+    .line 16
+    .line 17
+    const-string v2, "android.intent.action.VIEW"
+
+    .line 18
+    .line 19
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 20
+    .line 21
+    .line 22
+    const-string v2, "chrome-native://newtab/"
+
+    .line 23
+    .line 24
+    invoke-virtual {v0, v2}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v0
+
+    .line 28
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    .line 33
+    .line 34
+    .line 35
+    const-class v0, Lorg/chromium/chrome/browser/document/ChromeLauncherActivity;
+
+    .line 36
+    .line 37
+    invoke-virtual {v1, p0, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    .line 38
+    .line 39
+    .line 40
+    const-string v0, "create_new_tab"
+
+    .line 41
+    .line 42
+    const/4 v2, 0x1
+
+    .line 43
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 44
+    .line 45
+    .line 46
+    const-string v0, "com.android.browser.application_id"
+
+    .line 47
+    .line 48
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object p0
+
+    .line 52
+    invoke-virtual {v1, v0, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 53
+    .line 54
+    .line 55
+    const-string p0, "com.google.android.apps.chrome.EXTRA_OPEN_NEW_INCOGNITO_TAB"
+
+    .line 56
+    .line 57
+    invoke-virtual {v1, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 58
+    .line 59
+    .line 60
+    invoke-static {v1}, Lrr9;->a(Landroid/content/Intent;)V
+
+    .line 61
+    .line 62
+    .line 63
+    return-object v1
+.end method
+
+.method public static h(Landroid/app/Activity;Landroid/content/Intent;)I
+    .registers 7
+
+    .line 1
+    invoke-static {p1}, Lrr9;->i(Landroid/content/Intent;)Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    const/4 v1, 0x5
+
+    .line 6
+    if-nez v0, :cond_12d
+
+    .line 7
+    .line 8
+    const-string v0, "com.android.browser.application_id"
+
+================================================================================
+FILE: /content/classes2_smali/m7j.smali
+MATCH LINE: 21
+.class public abstract Lm7j;
+.super Ljava/lang/Object;
+.source "chromium-ChromePublic.apk-stable-430005804"
+
+
+# static fields
+.field public static final a:Lorg/chromium/url/GURL;
+
+.field public static final b:Lorg/chromium/url/GURL;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 2
+
+    .line 1
+    new-instance v0, Lorg/chromium/url/GURL;
+
+    .line 2
+    .line 3
+    const-string v1, "chrome://newtab/"
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1}, Lorg/chromium/url/GURL;-><init>(Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, Lm7j;->a:Lorg/chromium/url/GURL;
+
+    .line 9
+    .line 10
+    new-instance v0, Lorg/chromium/url/GURL;
+
+    .line 11
+    .line 12
+    invoke-direct {v0, v1}, Lorg/chromium/url/GURL;-><init>(Ljava/lang/String;)V
+
+    .line 13
+    .line 14
+    .line 15
+    sput-object v0, Lm7j;->b:Lorg/chromium/url/GURL;
+
+    .line 16
+    .line 17
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;Lorg/chromium/url/GURL;)Landroid/util/Pair;
+    .registers 3
+
+    .line 1
+    invoke-static {p1}, Lxhl;->h(Lorg/chromium/url/GURL;)Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    if-eqz v0, :cond_c
+
+    .line 6
+    .line 7
+    new-instance v0, Landroid/util/Pair;
+
+    .line 8
+    .line 9
+    invoke-direct {v0, p1, p0}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 10
+    .line 11
+    .line 12
+    goto :goto_25
+
+    .line 13
+    :cond_c
+    invoke-static {p1}, Lxhl;->j(Lorg/chromium/url/GURL;)Z
+
+    .line 14
+    .line 15
+    .line 16
+    move-result p0
+
+    .line 17
+    if-eqz p0, :cond_1c
+
+    .line 18
+    .line 19
+    new-instance v0, Landroid/util/Pair;
+
+    .line 20
+    .line 21
+    sget-object p0, Lm7j;->b:Lorg/chromium/url/GURL;
+
+    .line 22
+    .line 23
+    const-string p1, "New tab"
+
+    .line 24
+    .line 25
+    invoke-direct {v0, p0, p1}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 26
+    .line 27
+    .line 28
+    goto :goto_25
+
+    .line 29
+    :cond_1c
+    new-instance v0, Landroid/util/Pair;
+
+    .line 30
+    .line 31
+    sget-object p0, Lm7j;->a:Lorg/chromium/url/GURL;
+
+    .line 32
+    .line 33
+    const-string p1, "Unsavable tab"
+
+================================================================================
+FILE: /content/classes2_smali/hgl.smali
+MATCH LINE: 82
+    .line 5
+    .line 6
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, Lhgl;->a:Ljava/util/HashMap;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/String;)Ljava/lang/String;
+    .registers 6
+
+    .line 1
+    sget-object v0, Lsq3;->r0:Lu72;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Lv53;->b()Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_88
+
+    .line 8
+    .line 9
+    iget-object p0, p0, Lhgl;->a:Ljava/util/HashMap;
+
+    .line 10
+    .line 11
+    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p0
+
+    .line 15
+    check-cast p0, Ligl;
+
+    .line 16
+    .line 17
+    if-eqz p0, :cond_88
+
+    .line 18
+    .line 19
+    iget-byte p0, p0, Ligl;->a:B
+
+    .line 20
+    .line 21
+    const-string v0, "chrome://newtab/"
+
+    .line 22
+    .line 23
+    const-string v1, "chrome://bookmarks/"
+
+    .line 24
+    .line 25
+    const/4 v2, 0x0
+
+    .line 26
+    const/4 v3, 0x0
+
+    .line 27
+    packed-switch p0, :pswitch_data_8a
+
+    .line 28
+    .line 29
+    .line 30
+    const-string p0, "HISTORY"
+
+    .line 31
+    .line 32
+    sget-object v0, Lgt3;->a:Lf3a;
+
+    .line 33
+    .line 34
+    invoke-virtual {v0, p0}, Lf3a;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object p0
+
+    .line 38
+    sget-object v0, Lgq4;->a:Landroid/content/SharedPreferences;
+
+    .line 39
+    .line 40
+    invoke-interface {v0, p0, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    .line 41
+    .line 42
+    .line 43
+    move-result p0
+
+    .line 44
+    if-eqz p0, :cond_85
+
+    .line 45
+    .line 46
+    const-string v2, "chrome://history/"
+
+    .line 47
+    .line 48
+    goto :goto_85
+
+    .line 49
+    :pswitch_30
+    const-string p0, "BOOKMARKS"
+
+    .line 50
+    .line 51
+    sget-object v0, Lgt3;->a:Lf3a;
+
+    .line 52
+    .line 53
+    invoke-virtual {v0, p0}, Lf3a;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 54
+    .line 55
+    .line 56
+    move-result-object p0
+
+    .line 57
+    sget-object v0, Lgq4;->a:Landroid/content/SharedPreferences;
+
+    .line 58
+    .line 59
+    invoke-interface {v0, p0, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    .line 60
+    .line 61
+    .line 62
+    move-result p0
+
+    .line 63
+    if-eqz p0, :cond_70
+
+    .line 64
+    .line 65
+    goto :goto_71
+
+    .line 66
+    :pswitch_41
+    const-string p0, "NTP"
+
+    .line 67
+    .line 68
+    sget-object v1, Lgt3;->a:Lf3a;
+
+================================================================================
+FILE: /content/classes2_smali/u0j.smali
+MATCH LINE: 160
+
+    .line 32
+    .line 33
+    .line 34
+    iget-object v1, v1, Ly1d;->v:Ljava/lang/Object;
+
+    .line 35
+    .line 36
+    check-cast v1, Lorg/chromium/chrome/browser/tabmodel/TabModel;
+
+    .line 37
+    .line 38
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
+
+    .line 39
+    .line 40
+    .line 41
+    move-result v2
+
+    .line 42
+    if-eqz v2, :cond_34
+
+    .line 43
+    .line 44
+    invoke-interface {v1}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->H0()Lozi;
+
+    .line 45
+    .line 46
+    .line 47
+    move-result-object p0
+
+    .line 48
+    const/4 p1, 0x2
+
+    .line 49
+    invoke-interface {p0, p1}, Lozi;->h(I)V
+
+    .line 50
+    .line 51
+    .line 52
+    goto :goto_a5
+
+    .line 53
+    :cond_34
+    invoke-interface {v1}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->c()Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 54
+    .line 55
+    .line 56
+    move-result-object v2
+
+    .line 57
+    invoke-static {v2}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object v2
+
+    .line 61
+    const-string v3, "chrome-native://newtab/"
+
+    .line 62
+    .line 63
+    invoke-virtual {v2, v3}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 64
+    .line 65
+    .line 66
+    move-result-object v2
+
+    .line 67
+    new-instance v3, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 68
+    .line 69
+    invoke-direct {v3, v0, v2}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 70
+    .line 71
+    .line 72
+    invoke-static {v1, v3, p1}, Lu8j;->h(Lorg/chromium/chrome/browser/tabmodel/TabModel;Lorg/chromium/content_public/browser/LoadUrlParams;Lorg/chromium/base/Token;)V
+
+    .line 73
+    .line 74
+    .line 75
+    iget-byte p0, p0, Lk1j;->I:B
+
+    .line 76
+    .line 77
+    invoke-static {p0}, Lqwj;->a(I)Ljava/lang/String;
+
+    .line 78
+    .line 79
+    .line 80
+    move-result-object p0
+
+    .line 81
+    const-string p1, "MobileNewTabOpened."
+
+    .line 82
+    .line 83
+    invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 84
+    .line 85
+    .line 86
+    move-result-object p0
+
+    .line 87
+    invoke-static {p0}, Lsrf;->a(Ljava/lang/String;)V
+
+    .line 88
+    .line 89
+    .line 90
+    goto :goto_a5
+
+    .line 91
+    :pswitch_5a
+    invoke-virtual {p0}, Lk1j;->i()V
+
+    .line 92
+    .line 93
+    .line 94
+    iget-object p1, p0, Lk1j;->B:Ly1d;
+
+    .line 95
+    .line 96
+    iget-object p1, p1, Ly1d;->v:Ljava/lang/Object;
+
+    .line 97
+    .line 98
+    check-cast p1, Lorg/chromium/chrome/browser/tabmodel/TabModel;
+
+    .line 99
+    .line 100
+    iget-object v2, p0, Lk1j;->H:Ljd5;
+
+    .line 101
+    .line 102
+    iget-object p0, p0, Lk1j;->X:Lorg/chromium/base/Token;
+
+    .line 103
+    .line 104
+    if-eqz p0, :cond_a5
+
+    .line 105
+    .line 106
+    invoke-interface {p1, p0}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->containsTabGroup(Lorg/chromium/base/Token;)Z
+
+    .line 107
+    .line 108
+    .line 109
+    move-result p1
+
+    .line 110
+    if-eqz p1, :cond_a5
+
+    .line 111
+    .line 112
+
+================================================================================
+FILE: /content/classes2_smali/mo2.smali
+MATCH LINE: 1149
+.end method
+
+.method public final i(I)Z
+    .registers 2
+
+    .line 1
+    iget-object p0, p0, Lmo2;->f:Lwk0;
+
+    .line 2
+    .line 3
+    iget-object p0, p0, Lwk0;->a:Landroid/util/SparseArray;
+
+    .line 4
+    .line 5
+    invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object p0
+
+    .line 9
+    check-cast p0, Luk0;
+
+    .line 10
+    .line 11
+    if-eqz p0, :cond_14
+
+    .line 12
+    .line 13
+    invoke-interface {p0}, Luk0;->b()Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object p0
+
+    .line 17
+    if-eqz p0, :cond_14
+
+    .line 18
+    .line 19
+    const/4 p0, 0x1
+
+    .line 20
+    goto :goto_15
+
+    .line 21
+    :cond_14
+    const/4 p0, 0x0
+
+    .line 22
+    :goto_15
+    return p0
+.end method
+
+.method public final j(ILjava/lang/String;)Lorg/chromium/chrome/browser/tab/Tab;
+    .registers 6
+
+    .line 1
+    const-string v0, "chrome-native://newtab/"
+
+    .line 2
+    .line 3
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_16
+
+    .line 8
+    .line 9
+    const/4 v0, 0x2
+
+    .line 10
+    if-eq p1, v0, :cond_13
+
+    .line 11
+    .line 12
+    const/16 v0, 0xb
+
+    .line 13
+    .line 14
+    if-eq p1, v0, :cond_13
+
+    .line 15
+    .line 16
+    const/16 v0, 0x13
+
+    .line 17
+    .line 18
+    if-ne p1, v0, :cond_16
+
+    .line 19
+    .line 20
+    :cond_13
+    invoke-static {}, Lx52;->Y4()Lorg/chromium/chrome/browser/ChromeTabbedActivity;
+
+    .line 21
+    .line 22
+    .line 23
+    :cond_16
+    new-instance v0, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 24
+    .line 25
+    const/4 v1, 0x0
+
+    .line 26
+    invoke-direct {v0, v1, p2}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 27
+    .line 28
+    .line 29
+    const-wide/16 v1, 0x0
+
+    .line 30
+    .line 31
+    iput-wide v1, v0, Lorg/chromium/content_public/browser/LoadUrlParams;->n:J
+
+    .line 32
+    .line 33
+    const/4 p2, 0x0
+
+    .line 34
+    invoke-virtual {p0, v0, p1, p2, p2}, Lmo2;->l(Lorg/chromium/content_public/browser/LoadUrlParams;ILorg/chromium/chrome/browser/tab/Tab;Landroid/content/Intent;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object p0
+
+    .line 38
+    return-object p0
+.end method
+
+.method public final k(Lorg/chromium/content_public/browser/LoadUrlParams;Ljava/lang/String;ILorg/chromium/chrome/browser/tab/Tab;I)Lorg/chromium/chrome/browser/tab/Tab;
+    .registers 14
+
+    .line 1
+    const/4 v6, 0x0
+
+    .line 2
+    const/4 v7, 0x0
+
+    .line 3
+    const/16 v3, 0x17
+
+    .line 4
+    .line 5
+    move-object v0, p0
+
+    .line 6
+    move-object v1, p1
+
+    .line 7
+
+================================================================================
+FILE: /content/classes2_smali/i90.smali
+MATCH LINE: 172
+    .line 45
+    if-nez v5, :cond_36
+
+    .line 46
+    .line 47
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 48
+    .line 49
+    .line 50
+    move-result v5
+
+    .line 51
+    if-nez v5, :cond_36
+
+    .line 52
+    .line 53
+    move v5, v6
+
+    .line 54
+    goto :goto_37
+
+    .line 55
+    :cond_36
+    move v5, v4
+
+    .line 56
+    :goto_37
+    sget-object v7, Lxhl;->a:Ljava/util/regex/Pattern;
+
+    .line 57
+    .line 58
+    sget-object v7, Ltga;->i:Ltga;
+
+    .line 59
+    .line 60
+    invoke-virtual {v7}, Ltga;->d()Z
+
+    .line 61
+    .line 62
+    .line 63
+    move-result v7
+
+    .line 64
+    if-eqz v7, :cond_46
+
+    .line 65
+    .line 66
+    invoke-static {v3}, Lxhl;->k(Ljava/lang/String;)Z
+
+    .line 67
+    .line 68
+    .line 69
+    move-result v3
+
+    .line 70
+    goto :goto_61
+
+    .line 71
+    :cond_46
+    const-string v7, "chrome-native://newtab/"
+
+    .line 72
+    .line 73
+    invoke-static {v3, v7}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    .line 74
+    .line 75
+    .line 76
+    move-result v7
+
+    .line 77
+    if-nez v7, :cond_60
+
+    .line 78
+    .line 79
+    const-string v7, "chrome://newtab/"
+
+    .line 80
+    .line 81
+    invoke-static {v3, v7}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    .line 82
+    .line 83
+    .line 84
+    move-result v7
+
+    .line 85
+    if-nez v7, :cond_60
+
+    .line 86
+    .line 87
+    const-string v7, "about:newtab"
+
+    .line 88
+    .line 89
+    invoke-static {v3, v7}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    .line 90
+    .line 91
+    .line 92
+    move-result v3
+
+    .line 93
+    if-nez v3, :cond_60
+
+    .line 94
+    .line 95
+    move v3, v4
+
+    .line 96
+    goto :goto_61
+
+    .line 97
+    :cond_60
+    move v3, v6
+
+    .line 98
+    :goto_61
+    invoke-static {}, Lf92;->d()Lf92;
+
+    .line 99
+    .line 100
+    .line 101
+    move-result-object v7
+
+    .line 102
+    invoke-virtual {v7, v4, v4}, Lf92;->b(ZZ)Lorg/chromium/url/GURL;
+
+    .line 103
+    .line 104
+    .line 105
+    move-result-object v7
+
+    .line 106
+    if-eqz v7, :cond_76
+
+    .line 107
+    .line 108
+    iget-object v8, v7, Lorg/chromium/url/GURL;->a:Ljava/lang/String;
+
+    .line 109
+    .line 110
+    invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
+
+    .line 111
+    .line 112
+    .line 113
+    move-result v8
+
+    .line 114
+    if-nez v8, :cond_76
+
+    .line 115
+    .line 116
+    invoke-static {v7}, Lxhl;->l(Lorg/chromium/url/GURL;)Z
+
+    .line 117
+    .line 118
+    .line 119
+
+================================================================================
+FILE: /content/classes2_smali/i90.smali
+MATCH LINE: 188
+    .line 53
+    move v5, v6
+
+    .line 54
+    goto :goto_37
+
+    .line 55
+    :cond_36
+    move v5, v4
+
+    .line 56
+    :goto_37
+    sget-object v7, Lxhl;->a:Ljava/util/regex/Pattern;
+
+    .line 57
+    .line 58
+    sget-object v7, Ltga;->i:Ltga;
+
+    .line 59
+    .line 60
+    invoke-virtual {v7}, Ltga;->d()Z
+
+    .line 61
+    .line 62
+    .line 63
+    move-result v7
+
+    .line 64
+    if-eqz v7, :cond_46
+
+    .line 65
+    .line 66
+    invoke-static {v3}, Lxhl;->k(Ljava/lang/String;)Z
+
+    .line 67
+    .line 68
+    .line 69
+    move-result v3
+
+    .line 70
+    goto :goto_61
+
+    .line 71
+    :cond_46
+    const-string v7, "chrome-native://newtab/"
+
+    .line 72
+    .line 73
+    invoke-static {v3, v7}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    .line 74
+    .line 75
+    .line 76
+    move-result v7
+
+    .line 77
+    if-nez v7, :cond_60
+
+    .line 78
+    .line 79
+    const-string v7, "chrome://newtab/"
+
+    .line 80
+    .line 81
+    invoke-static {v3, v7}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    .line 82
+    .line 83
+    .line 84
+    move-result v7
+
+    .line 85
+    if-nez v7, :cond_60
+
+    .line 86
+    .line 87
+    const-string v7, "about:newtab"
+
+    .line 88
+    .line 89
+    invoke-static {v3, v7}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    .line 90
+    .line 91
+    .line 92
+    move-result v3
+
+    .line 93
+    if-nez v3, :cond_60
+
+    .line 94
+    .line 95
+    move v3, v4
+
+    .line 96
+    goto :goto_61
+
+    .line 97
+    :cond_60
+    move v3, v6
+
+    .line 98
+    :goto_61
+    invoke-static {}, Lf92;->d()Lf92;
+
+    .line 99
+    .line 100
+    .line 101
+    move-result-object v7
+
+    .line 102
+    invoke-virtual {v7, v4, v4}, Lf92;->b(ZZ)Lorg/chromium/url/GURL;
+
+    .line 103
+    .line 104
+    .line 105
+    move-result-object v7
+
+    .line 106
+    if-eqz v7, :cond_76
+
+    .line 107
+    .line 108
+    iget-object v8, v7, Lorg/chromium/url/GURL;->a:Ljava/lang/String;
+
+    .line 109
+    .line 110
+    invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
+
+    .line 111
+    .line 112
+    .line 113
+    move-result v8
+
+    .line 114
+    if-nez v8, :cond_76
+
+    .line 115
+    .line 116
+    invoke-static {v7}, Lxhl;->l(Lorg/chromium/url/GURL;)Z
+
+    .line 117
+    .line 118
+    .line 119
+    :cond_76
+    iget-object v2, v2, Lnu3;->v:Lorg/chromium/chrome/browser/ChromeTabbedActivity;
+
+    .line 120
+    .line 121
+    invoke-virtual {v2}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    .line 122
+    .line 123
+    .line 124
+    move-result-object v2
+
+    .line 125
+    invoke-static {v2}, Lorg/chromium/chrome/browser/incognito/IncognitoTabLauncher;->a(Landroid/content/Intent;)Z
+
+    .line 126
+
+================================================================================
+FILE: /content/classes2_smali/ajj.smali
+MATCH LINE: 346
+    .line 115
+    .line 116
+    .line 117
+    move-result-object p2
+
+    .line 118
+    new-instance v1, Ljava/util/ArrayList;
+
+    .line 119
+    .line 120
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 121
+    .line 122
+    .line 123
+    invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    .line 124
+    .line 125
+    .line 126
+    move-result-object v0
+
+    .line 127
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    .line 128
+    .line 129
+    .line 130
+    move-result-object v0
+
+    .line 131
+    :goto_82
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 132
+    .line 133
+    .line 134
+    move-result v2
+
+    .line 135
+    if-eqz v2, :cond_a3
+
+    .line 136
+    .line 137
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 138
+    .line 139
+    .line 140
+    move-result-object v2
+
+    .line 141
+    check-cast v2, Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 142
+    .line 143
+    new-instance v4, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 144
+    .line 145
+    const-string v5, "chrome-native://newtab/"
+
+    .line 146
+    .line 147
+    invoke-virtual {p2, v5}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 148
+    .line 149
+    .line 150
+    move-result-object v5
+
+    .line 151
+    invoke-direct {v4, v3, v5}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 152
+    .line 153
+    .line 154
+    const/16 v5, 0x19
+
+    .line 155
+    .line 156
+    invoke-interface {p0, v4, v5, v2}, Lozi;->c(Lorg/chromium/content_public/browser/LoadUrlParams;ILorg/chromium/chrome/browser/tab/Tab;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 157
+    .line 158
+    .line 159
+    move-result-object v2
+
+    .line 160
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 161
+    .line 162
+    .line 163
+    goto :goto_82
+
+    .line 164
+    :cond_a3
+    invoke-interface {p1, v1}, Lzij;->g(Ljava/util/List;)V
+
+    .line 165
+    .line 166
+    .line 167
+    return-object v1
+.end method
+
+.method public final b(Lzij;Z)V
+    .registers 10
+
+    .line 1
+    invoke-interface {p1}, Lzij;->d()Lzc5;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    invoke-interface {p1}, Lzij;->c()Ljava/util/List;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v1
+
+    .line 9
+    iget-object v2, v0, Lzc5;->b:Ljava/util/ArrayList;
+
+    .line 10
+    .line 11
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v3
+
+    .line 15
+    iget-object v0, v0, Lzc5;->a:Ljava/util/ArrayList;
+
+    .line 16
+    .line 17
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v0
+
+    .line 21
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    .line 22
+    .line 23
+    .line 24
+    move-result v1
+
+    .line 25
+    const/4 v4, 0x0
+
+
+================================================================================
+FILE: /content/classes2_smali/wk2.smali
+MATCH LINE: 153
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v1
+
+    .line 43
+    const-string v2, "brave_last_active_tab_url"
+
+    .line 44
+    .line 45
+    invoke-virtual {v1, v2, v0}, Lorg/chromium/base/shared_preferences/SharedPreferencesManager;->writeString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 46
+    .line 47
+    .line 48
+    :cond_2f
+    const/4 v0, 0x0
+
+    .line 49
+    if-nez p2, :cond_34
+
+    .line 50
+    .line 51
+    move-object v1, v0
+
+    .line 52
+    goto :goto_3c
+
+    .line 53
+    :cond_34
+    invoke-virtual {p2}, Lejj;->i()Lorg/chromium/chrome/browser/tabmodel/TabModel;
+
+    .line 54
+    .line 55
+    .line 56
+    move-result-object v1
+
+    .line 57
+    invoke-interface {v1}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->c()Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object v1
+
+    .line 61
+    :goto_3c
+    invoke-static {v1}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v1
+
+    .line 65
+    new-instance v2, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 66
+    .line 67
+    const-string v3, "chrome-native://newtab/"
+
+    .line 68
+    .line 69
+    invoke-virtual {v1, v3}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 70
+    .line 71
+    .line 72
+    move-result-object v1
+
+    .line 73
+    const/4 v3, 0x0
+
+    .line 74
+    invoke-direct {v2, v3, v1}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 75
+    .line 76
+    .line 77
+    const/16 v1, 0xb
+
+    .line 78
+    .line 79
+    invoke-virtual {p0, v2, v1, v0, v0}, Lmo2;->l(Lorg/chromium/content_public/browser/LoadUrlParams;ILorg/chromium/chrome/browser/tab/Tab;Landroid/content/Intent;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 80
+    .line 81
+    .line 82
+    move-result-object p0
+
+    .line 83
+    invoke-interface {p0}, Lorg/chromium/chrome/browser/tab/Tab;->getUrl()Lorg/chromium/url/GURL;
+
+    .line 84
+    .line 85
+    .line 86
+    move-result-object v0
+
+    .line 87
+    invoke-static {v0}, Lxhl;->l(Lorg/chromium/url/GURL;)Z
+
+    .line 88
+    .line 89
+    .line 90
+    move-result v0
+
+    .line 91
+    if-nez v0, :cond_63
+
+    .line 92
+    .line 93
+    const-string p0, "NewTabPage.FailToShowHomeSurfaceUI"
+
+    .line 94
+    .line 95
+    const/4 p1, 0x5
+
+    .line 96
+    invoke-static {v3, p1, p0}, Lrrf;->j(IILjava/lang/String;)V
+
+    .line 97
+    .line 98
+    .line 99
+    goto :goto_7d
+
+    .line 100
+    :cond_63
+    if-nez p4, :cond_7a
+
+    .line 101
+    .line 102
+    new-instance p4, Lb6g;
+
+    .line 103
+    .line 104
+    invoke-direct {p4}, Ljava/lang/Object;-><init>()V
+
+    .line 105
+    .line 106
+    .line 107
+    iput-object p3, p4, Lb6g;->u:Ljava/lang/String;
+
+    .line 108
+    .line 109
+    iput-object p0, p4, Lb6g;->v:Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 110
+    .line 111
+    iput-object p1, p4, Lb6g;->w:Lpu8;
+
+    .line 112
+    .line 113
+    iput-object p2, p4, Lb6g;->x:Lejj;
+
+    .line 114
+    .line 115
+    invoke-virtual {p2, v3}, Lejj;->l(Z)Lorg/chromium/chrome/browser/tabmodel/TabModel;
+
+    .line 116
+
+================================================================================
+FILE: /content/classes2_smali/org/chromium/chrome/browser/ChromeTabbedActivity.smali
+MATCH LINE: 6623
+    invoke-virtual {v0}, Lejj;->i()Lorg/chromium/chrome/browser/tabmodel/TabModel;
+
+    .line 624
+    .line 625
+    .line 626
+    move-result-object v0
+
+    .line 627
+    invoke-interface {v10}, Lorg/chromium/chrome/browser/tab/Tab;->getTabGroupId()Lorg/chromium/base/Token;
+
+    .line 628
+    .line 629
+    .line 630
+    move-result-object v2
+
+    .line 631
+    if-eqz v2, :cond_29b
+
+    .line 632
+    .line 633
+    invoke-virtual {v3}, Lojj;->h()Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 634
+    .line 635
+    .line 636
+    move-result-object v2
+
+    .line 637
+    invoke-interface {v0}, Lmbj;->isIncognito()Z
+
+    .line 638
+    .line 639
+    .line 640
+    move-result v3
+
+    .line 641
+    invoke-super {v1, v3}, Ldn3;->p0(Z)Lozi;
+
+    .line 642
+    .line 643
+    .line 644
+    move-result-object v3
+
+    .line 645
+    check-cast v3, Lmo2;
+
+    .line 646
+    .line 647
+    new-instance v4, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 648
+    .line 649
+    invoke-static {v2}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 650
+    .line 651
+    .line 652
+    move-result-object v2
+
+    .line 653
+    const-string v7, "chrome-native://newtab/"
+
+    .line 654
+    .line 655
+    invoke-virtual {v2, v7}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 656
+    .line 657
+    .line 658
+    move-result-object v2
+
+    .line 659
+    invoke-direct {v4, v11, v2}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 660
+    .line 661
+    .line 662
+    invoke-virtual {v3, v4, v6, v10, v5}, Lmo2;->l(Lorg/chromium/content_public/browser/LoadUrlParams;ILorg/chromium/chrome/browser/tab/Tab;Landroid/content/Intent;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 663
+    .line 664
+    .line 665
+    move-result-object v10
+
+    .line 666
+    if-eqz v10, :cond_b2a
+
+    .line 667
+    .line 668
+    :cond_29b
+    invoke-interface {v0, v10}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->s(Lorg/chromium/chrome/browser/tab/Tab;)V
+
+    .line 669
+    .line 670
+    .line 671
+    invoke-interface {v10}, Lorg/chromium/chrome/browser/tab/Tab;->getTabGroupId()Lorg/chromium/base/Token;
+
+    .line 672
+    .line 673
+    .line 674
+    move-result-object v2
+
+    .line 675
+    if-eqz v2, :cond_b29
+
+    .line 676
+    .line 677
+    invoke-virtual {v1}, Luo3;->D2()Lu1c;
+
+    .line 678
+    .line 679
+    .line 680
+    move-result-object v3
+
+    .line 681
+    new-instance v4, Lp3j;
+
+    .line 682
+    .line 683
+    invoke-direct {v4, v1, v3, v5}, Lp3j;-><init>(Landroid/content/Context;Lu1c;Ljava/lang/Runnable;)V
+
+    .line 684
+    .line 685
+    .line 686
+    invoke-virtual {v4, v2, v0}, Lp3j;->a(Lorg/chromium/base/Token;Lorg/chromium/chrome/browser/tabmodel/TabModel;)V
+
+    .line 687
+    .line 688
+    .line 689
+    goto/16 :goto_b29
+
+    .line 690
+    .line 691
+    :cond_2b2
+    const v4, 0x7f010111
+
+    .line 692
+    .line 693
+    .line 694
+    iget-object v7, v1, Ldn3;->W0:Ly1d;
+
+    .line 695
+    .line 696
+    const/4 v8, 0x6
+
+    .line 697
+    if-ne v9, v4, :cond_2e5
+
+    .line 698
+    .line 699
+    iget-object v0, v7, Ly1d;->v:Ljava/lang/Object;
+
+    .line 700
+    .line 701
+    check-cast v0, Lorg/chromium/chrome/browser/compositor/CompositorViewHolder;
+
+    .line 702
+    .line 703
+    new-instance v3, Lhv3;
+
+
+================================================================================
+FILE: /content/classes2_smali/org/chromium/chrome/browser/ChromeTabbedActivity.smali
+MATCH LINE: 9846
+    .line 2259
+    move-result-object v1
+
+    .line 2260
+    invoke-interface {v1}, Lmbj;->isIncognito()Z
+
+    .line 2261
+    .line 2262
+    .line 2263
+    move-result v1
+
+    .line 2264
+    invoke-virtual {v2, v3, v0, v1}, Lf92;->m(Lorg/chromium/chrome/browser/tab/Tab;Lpzi;Z)V
+
+    .line 2265
+    .line 2266
+    .line 2267
+    const-string v0, "MobileMenuHomepage"
+
+    .line 2268
+    .line 2269
+    invoke-static {v0}, Lsrf;->a(Ljava/lang/String;)V
+
+    .line 2270
+    .line 2271
+    .line 2272
+    goto/16 :goto_b29
+
+    .line 2273
+    .line 2274
+    :cond_8e1
+    const v2, 0x7f01102d
+
+    .line 2275
+    .line 2276
+    .line 2277
+    if-ne v9, v2, :cond_925
+
+    .line 2278
+    .line 2279
+    iget-object v0, v1, Lorg/chromium/chrome/browser/ChromeTabbedActivity;->Q2:Lzqg;
+
+    .line 2280
+    .line 2281
+    invoke-virtual {v0}, Lzqg;->a()Lyqg;
+
+    .line 2282
+    .line 2283
+    .line 2284
+    move-result-object v2
+
+    .line 2285
+    iget-object v3, v2, Lyqg;->a:Landroid/content/Intent;
+
+    .line 2286
+    .line 2287
+    new-instance v4, Lorg/chromium/url/GURL;
+
+    .line 2288
+    .line 2289
+    const-string v5, "chrome://newtab/"
+
+    .line 2290
+    .line 2291
+    invoke-direct {v4, v5}, Lorg/chromium/url/GURL;-><init>(Ljava/lang/String;)V
+
+    .line 2292
+    .line 2293
+    .line 2294
+    invoke-static {v4}, Lorg/chromium/url/GURL;->m(Lorg/chromium/url/GURL;)Z
+
+    .line 2295
+    .line 2296
+    .line 2297
+    move-result v5
+
+    .line 2298
+    if-eqz v5, :cond_8fe
+
+    .line 2299
+    .line 2300
+    move-object/from16 v5, v21
+
+    .line 2301
+    .line 2302
+    goto :goto_902
+
+    .line 2303
+    :cond_8fe
+    invoke-virtual {v4}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 2304
+    .line 2305
+    .line 2306
+    move-result-object v5
+
+    .line 2307
+    :goto_902
+    const-string v4, "org.chromium.chrome.browser.ui.searchactivityutils.current_url"
+
+    .line 2308
+    .line 2309
+    invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 2310
+    .line 2311
+    .line 2312
+    iget-object v1, v1, Lorg/chromium/chrome/browser/ChromeTabbedActivity;->Z2:Lejj;
+
+    .line 2313
+    .line 2314
+    invoke-virtual {v1}, Lejj;->v()Z
+
+    .line 2315
+    .line 2316
+    .line 2317
+    move-result v1
+
+    .line 2318
+    const-string v4, "org.chromium.chrome.browser.ui.searchactivityutils.is_incognito"
+
+    .line 2319
+    .line 2320
+    invoke-virtual {v3, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 2321
+    .line 2322
+    .line 2323
+    const-string v1, "org.chromium.chrome.browser.ui.searchactivityutils.resolution_type"
+
+    .line 2324
+    .line 2325
+    invoke-virtual {v3, v1, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 2326
+    .line 2327
+    .line 2328
+    invoke-virtual {v2}, Lyqg;->a()Landroid/content/Intent;
+
+    .line 2329
+    .line 2330
+    .line 2331
+    move-result-object v1
+
+    .line 2332
+    invoke-virtual {v0, v1}, Lzqg;->b(Landroid/content/Intent;)V
+
+    .line 2333
+    .line 2334
+    .line 2335
+    const-string v0, "MobileMenuTabSearch"
+
+    .line 2336
+    .line 2337
+    invoke-static {v0}, Lsrf;->a(Ljava/lang/String;)V
+
+    .line 2338
+    .line 2339
+    .line 2340
+    goto/16 :goto_b29
+
+================================================================================
+FILE: /content/classes2_smali/org/chromium/chrome/browser/ChromeTabbedActivity.smali
+MATCH LINE: 17853
+
+    .line 49
+    :cond_30
+    invoke-interface {v5}, Lt8f;->c()Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 50
+    .line 51
+    .line 52
+    move-result-object v5
+
+    .line 53
+    :goto_34
+    invoke-static {v5}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 54
+    .line 55
+    .line 56
+    move-result-object v5
+
+    .line 57
+    iget-object v6, v4, Lorg/chromium/url/GURL;->a:Ljava/lang/String;
+
+    .line 58
+    .line 59
+    invoke-virtual {v6}, Ljava/lang/String;->isEmpty()Z
+
+    .line 60
+    .line 61
+    .line 62
+    move-result v6
+
+    .line 63
+    if-nez v6, :cond_4b
+
+    .line 64
+    .line 65
+    invoke-static {v4}, Lxhl;->l(Lorg/chromium/url/GURL;)Z
+
+    .line 66
+    .line 67
+    .line 68
+    move-result v6
+
+    .line 69
+    if-nez v6, :cond_4b
+
+    .line 70
+    .line 71
+    invoke-virtual {v4}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 72
+    .line 73
+    .line 74
+    move-result-object v4
+
+    .line 75
+    goto :goto_51
+
+    .line 76
+    :cond_4b
+    const-string v4, "chrome-native://newtab/"
+
+    .line 77
+    .line 78
+    invoke-virtual {v5, v4}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v4
+
+    .line 82
+    :goto_51
+    invoke-super {p0, v1}, Ldn3;->p0(Z)Lozi;
+
+    .line 83
+    .line 84
+    .line 85
+    move-result-object v1
+
+    .line 86
+    check-cast v1, Lmo2;
+
+    .line 87
+    .line 88
+    const/16 v5, 0xb
+
+    .line 89
+    .line 90
+    invoke-virtual {v1, v5, v4}, Lmo2;->j(ILjava/lang/String;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 91
+    .line 92
+    .line 93
+    invoke-static {}, Lorg/chromium/chrome/browser/partnercustomizations/PartnerBrowserCustomizations;->b()Lorg/chromium/chrome/browser/partnercustomizations/PartnerBrowserCustomizations;
+
+    .line 94
+    .line 95
+    .line 96
+    move-result-object v1
+
+    .line 97
+    new-instance v5, Lwu3;
+
+    .line 98
+    .line 99
+    invoke-direct {v5, v2}, Lwu3;-><init>(B)V
+
+    .line 100
+    .line 101
+    .line 102
+    iget-object v6, v1, Lorg/chromium/chrome/browser/partnercustomizations/PartnerBrowserCustomizations;->c:Lvtd;
+
+    .line 103
+    .line 104
+    iget-object v7, p0, Lak0;->m0:Lne;
+
+    .line 105
+    .line 106
+    if-eqz v6, :cond_8e
+
+    .line 107
+    .line 108
+    invoke-virtual {v1}, Lorg/chromium/chrome/browser/partnercustomizations/PartnerBrowserCustomizations;->g()Z
+
+    .line 109
+    .line 110
+    .line 111
+    move-result v1
+
+    .line 112
+    iput-object v7, v6, Lvtd;->h:Lne;
+
+    .line 113
+    .line 114
+    iput-object v5, v6, Lvtd;->g:Lwu3;
+
+    .line 115
+    .line 116
+    iget-byte v5, v6, Lvtd;->e:B
+
+    .line 117
+    .line 118
+    const-string v8, "cr_PartnerCustUma"
+
+    .line 119
+    .line 120
+    if-eqz v5, :cond_7f
+
+    .line 121
+    .line 122
+    const-string v1, "Multiple initial Tabs being created, e.g. multi-instance."
+
+    .line 123
+    .line 124
+    invoke-static {v8, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 125
+    .line 126
+    .line 127
+
+================================================================================
+FILE: /content/classes2_smali/org/chromium/chrome/browser/ChromeTabbedActivity.smali
+MATCH LINE: 26091
+    .line 311
+    const/16 v10, 0x28
+
+    .line 312
+    .line 313
+    invoke-static {v10, v3}, LJ/N;->ZO(ILjava/lang/Object;)Z
+
+    .line 314
+    .line 315
+    .line 316
+    move-result v3
+
+    .line 317
+    if-nez v3, :cond_153
+
+    .line 318
+    .line 319
+    if-nez v18, :cond_148
+
+    .line 320
+    .line 321
+    if-nez v5, :cond_148
+
+    .line 322
+    .line 323
+    const-string v0, "Tried to open incognito tab while incognito disabled"
+
+    .line 324
+    .line 325
+    invoke-static {v7, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 326
+    .line 327
+    .line 328
+    return-object v6
+
+    .line 329
+    :cond_148
+    const v1, 0x7f140d23
+
+    .line 330
+    .line 331
+    .line 332
+    invoke-static {v0, v1, v11}, Liik;->b(Landroid/content/Context;II)Liik;
+
+    .line 333
+    .line 334
+    .line 335
+    move-result-object v0
+
+    .line 336
+    invoke-virtual {v0}, Liik;->d()V
+
+    .line 337
+    .line 338
+    .line 339
+    return-object v6
+
+    .line 340
+    :cond_153
+    const-string v3, "chrome-native://newtab/"
+
+    .line 341
+    .line 342
+    if-eqz v13, :cond_163
+
+    .line 343
+    .line 344
+    invoke-virtual {v13, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 345
+    .line 346
+    .line 347
+    move-result v7
+
+    .line 348
+    if-nez v7, :cond_163
+
+    .line 349
+    .line 350
+    invoke-virtual {v0, v1, v2, v11, v4}, Lorg/chromium/chrome/browser/ChromeTabbedActivity;->T5(Lorg/chromium/content_public/browser/LoadUrlParams;Ljava/lang/String;ZLandroid/content/Intent;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 351
+    .line 352
+    .line 353
+    move-result-object v6
+
+    .line 354
+    goto/16 :goto_290
+
+    .line 355
+    .line 356
+    :cond_163
+    invoke-static {}, Ljgl;->b()Lhgl;
+
+    .line 357
+    .line 358
+    .line 359
+    move-result-object v2
+
+    .line 360
+    if-eqz v5, :cond_181
+
+    .line 361
+    .line 362
+    invoke-super {v0, v11}, Ldn3;->p0(Z)Lozi;
+
+    .line 363
+    .line 364
+    .line 365
+    move-result-object v5
+
+    .line 366
+    check-cast v5, Lmo2;
+
+    .line 367
+    .line 368
+    invoke-virtual {v2, v3}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 369
+    .line 370
+    .line 371
+    move-result-object v2
+
+    .line 372
+    const/4 v3, 0x7
+
+    .line 373
+    invoke-virtual {v5, v3, v2}, Lmo2;->j(ILjava/lang/String;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 374
+    .line 375
+    .line 376
+    move-result-object v2
+
+    .line 377
+    const-string v3, "Android.LauncherShortcut.NewIncognitoTab"
+
+    .line 378
+    .line 379
+    invoke-static {v3}, Lsrf;->a(Ljava/lang/String;)V
+
+    .line 380
+    .line 381
+    .line 382
+    invoke-virtual {v0, v11}, Lorg/chromium/chrome/browser/ChromeTabbedActivity;->c6(Z)V
+
+    .line 383
+    .line 384
+    .line 385
+    goto :goto_1d6
+
+    .line 386
+    :cond_181
+    if-eqz v18, :cond_199
+
+    .line 387
+    .line 388
+    const-string v5, "QuickActionSearchWidget.StartIncognito"
+
+
+================================================================================
+FILE: /content/classes2_smali/org/chromium/chrome/browser/ChromeTabbedActivity.smali
+MATCH LINE: 30863
+    .line 52
+    invoke-static {v1}, Lxhl;->l(Lorg/chromium/url/GURL;)Z
+
+    .line 53
+    .line 54
+    .line 55
+    move-result v1
+
+    .line 56
+    const/4 v6, 0x1
+
+    .line 57
+    const/4 v7, 0x0
+
+    .line 58
+    if-eqz v1, :cond_46
+
+    .line 59
+    .line 60
+    iget-object v1, v5, Lpu8;->a:Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 61
+    .line 62
+    if-eqz v1, :cond_41
+
+    .line 63
+    .line 64
+    if-eq v1, v0, :cond_7b
+
+    .line 65
+    .line 66
+    :cond_41
+    iput-object v0, v5, Lpu8;->a:Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 67
+    .line 68
+    iput-object v7, v5, Lpu8;->b:Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 69
+    .line 70
+    goto :goto_7b
+
+    .line 71
+    :cond_46
+    invoke-interface {v2}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->c()Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 72
+    .line 73
+    .line 74
+    move-result-object v1
+
+    .line 75
+    invoke-static {v1}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 76
+    .line 77
+    .line 78
+    move-result-object v1
+
+    .line 79
+    const-string v8, "chrome-native://newtab/"
+
+    .line 80
+    .line 81
+    invoke-virtual {v1, v8}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 82
+    .line 83
+    .line 84
+    move-result-object v1
+
+    .line 85
+    invoke-static {v2, v1}, Ldkj;->f(Lorg/chromium/chrome/browser/tabmodel/TabModel;Ljava/lang/String;)I
+
+    .line 86
+    .line 87
+    .line 88
+    move-result v1
+
+    .line 89
+    const/4 v8, -0x1
+
+    .line 90
+    if-eq v1, v8, :cond_78
+
+    .line 91
+    .line 92
+    invoke-interface {v2, v1}, Lmbj;->getTabAt(I)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 93
+    .line 94
+    .line 95
+    move-result-object v4
+
+    .line 96
+    invoke-interface {v4}, Lorg/chromium/chrome/browser/tab/Tab;->getUrl()Lorg/chromium/url/GURL;
+
+    .line 97
+    .line 98
+    .line 99
+    move-result-object v7
+
+    .line 100
+    invoke-static {v7}, Lxhl;->l(Lorg/chromium/url/GURL;)Z
+
+    .line 101
+    .line 102
+    .line 103
+    move-result v7
+
+    .line 104
+    if-nez v7, :cond_70
+
+    .line 105
+    .line 106
+    const-string p0, "NewTabPage.FailToShowHomeSurfaceUI"
+
+    .line 107
+    .line 108
+    const/4 v0, 0x5
+
+    .line 109
+    invoke-static {v6, v0, p0}, Lrrf;->j(IILjava/lang/String;)V
+
+    .line 110
+    .line 111
+    .line 112
+    goto :goto_93
+
+    .line 113
+    :cond_70
+    const/4 v7, 0x3
+
+    .line 114
+    invoke-interface {v2, v1, v7}, Lorg/chromium/chrome/browser/tabmodel/TabModel;->E0(II)V
+
+    .line 115
+    .line 116
+    .line 117
+    invoke-static {v4, v0, v5}, Lc6g;->a(Lorg/chromium/chrome/browser/tab/Tab;Lorg/chromium/chrome/browser/tab/Tab;Lpu8;)V
+
+    .line 118
+    .line 119
+    .line 120
+    goto :goto_7b
+
+    .line 121
+    :cond_78
+    invoke-static {v4, v5, v7, v7, v0}, Lwk2;->a(Lmo2;Lpu8;Lejj;Ljava/lang/String;Lorg/chromium/chrome/browser/tab/Tab;)V
+
+    .line 122
+    .line 123
+    .line 124
+    :cond_7b
+    :goto_7b
+    const-string v0, "NewTabPage.AsHomeSurface.ShownAtStartup"
+
+    .line 125
+    .line 126
+    invoke-static {v0, v6}, Lrrf;->c(Ljava/lang/String;Z)V
+
+================================================================================
+FILE: /content/classes2_smali/org/chromium/chrome/browser/tabmodel/TabModelJniBridge.smali
+MATCH LINE: 1646
+
+    .line 73
+    .line 74
+    .line 75
+    move-result-object p0
+
+    .line 76
+    if-nez p7, :cond_4e
+
+    .line 77
+    .line 78
+    const/4 p1, 0x0
+
+    .line 79
+    :cond_4e
+    invoke-interface {p0, p6, v3, p1}, Lozi;->c(Lorg/chromium/content_public/browser/LoadUrlParams;ILorg/chromium/chrome/browser/tab/Tab;)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 80
+    .line 81
+    .line 82
+    :cond_51
+    return-void
+.end method
+
+.method public final openTabProgrammatically(Lorg/chromium/url/GURL;II)Lorg/chromium/chrome/browser/tab/Tab;
+    .registers 7
+
+    .line 1
+    iget-object v0, p0, Lorg/chromium/chrome/browser/tabmodel/TabModelJniBridge;->u:Lorg/chromium/chrome/browser/profiles/Profile;
+
+    .line 2
+    .line 3
+    iget-object v1, p1, Lorg/chromium/url/GURL;->a:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v1
+
+    .line 9
+    if-eqz v1, :cond_1a
+
+    .line 10
+    .line 11
+    invoke-static {v0}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p1
+
+    .line 15
+    new-instance v1, Lorg/chromium/url/GURL;
+
+    .line 16
+    .line 17
+    const-string v2, "chrome-native://newtab/"
+
+    .line 18
+    .line 19
+    invoke-virtual {p1, v2}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object p1
+
+    .line 23
+    invoke-direct {v1, p1}, Lorg/chromium/url/GURL;-><init>(Ljava/lang/String;)V
+
+    .line 24
+    .line 25
+    .line 26
+    move-object p1, v1
+
+    .line 27
+    :cond_1a
+    new-instance v1, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 28
+    .line 29
+    invoke-virtual {p1}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object p1
+
+    .line 33
+    const/4 v2, 0x0
+
+    .line 34
+    invoke-direct {v1, v2, p1}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 35
+    .line 36
+    .line 37
+    invoke-virtual {v0}, Lorg/chromium/chrome/browser/profiles/Profile;->g()Z
+
+    .line 38
+    .line 39
+    .line 40
+    move-result p1
+
+    .line 41
+    invoke-virtual {p0, p1}, Lorg/chromium/chrome/browser/tabmodel/TabModelJniBridge;->d(Z)Lozi;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object p0
+
+    .line 45
+    const/4 p1, 0x0
+
+    .line 46
+    invoke-interface {p0, v1, p3, p1, p2}, Lozi;->a(Lorg/chromium/content_public/browser/LoadUrlParams;ILorg/chromium/chrome/browser/tab/Tab;I)Lorg/chromium/chrome/browser/tab/Tab;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object p0
+
+    .line 50
+    return-object p0
+.end method
+
+.method public final pinTab(Lorg/chromium/chrome/browser/tab/Tab;)V
+    .registers 3
+
+    .line 1
+    invoke-interface {p1}, Lorg/chromium/chrome/browser/tab/Tab;->getId()I
+
+    .line 2
+    .line 3
+    .line 4
+    move-result p1
+
+    .line 5
+    const/4 v0, -0x1
+
+    .line 6
+    if-eq p1, v0, :cond_d
+
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    check-cast p0, Lorg/chromium/chrome/browser/tabmodel/TabCollectionTabModelImpl;
+
+    .line 10
+    .line 11
+    invoke-virtual {p0, p1, v0}, Lorg/chromium/chrome/browser/tabmodel/TabCollectionTabModelImpl;->W0(IZ)V
+
+    .line 12
+
+================================================================================
+FILE: /content/classes2_smali/org/chromium/chrome/browser/tab/TabImpl.smali
+MATCH LINE: 1298
+    .line 69
+    invoke-virtual {v6}, Ljava/lang/String;->isEmpty()Z
+
+    .line 70
+    .line 71
+    .line 72
+    move-result v6
+
+    .line 73
+    if-nez v6, :cond_51
+
+    .line 74
+    .line 75
+    iget-object v0, p0, Lorg/chromium/chrome/browser/tab/TabImpl;->f0:Lorg/chromium/url/GURL;
+
+    .line 76
+    .line 77
+    invoke-virtual {v0}, Lorg/chromium/url/GURL;->k()Ljava/lang/String;
+
+    .line 78
+    .line 79
+    .line 80
+    move-result-object v0
+
+    .line 81
+    goto :goto_68
+
+    .line 82
+    :cond_51
+    iget-object v5, v5, Lorg/chromium/chrome/browser/tab/WebContentsState;->y:Ljava/lang/String;
+
+    .line 83
+    .line 84
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 85
+    .line 86
+    .line 87
+    move-result v6
+
+    .line 88
+    if-nez v6, :cond_5b
+
+    .line 89
+    .line 90
+    move-object v0, v5
+
+    .line 91
+    goto :goto_68
+
+    .line 92
+    :cond_5b
+    invoke-static {v0}, Ljgl;->a(Lorg/chromium/chrome/browser/profiles/Profile;)Lhgl;
+
+    .line 93
+    .line 94
+    .line 95
+    move-result-object v0
+
+    .line 96
+    const-string v5, "chrome-native://newtab/"
+
+    .line 97
+    .line 98
+    invoke-virtual {v0, v5}, Lhgl;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 99
+    .line 100
+    .line 101
+    move-result-object v0
+
+    .line 102
+    goto :goto_68
+
+    .line 103
+    :cond_66
+    move-object v0, v2
+
+    .line 104
+    move v4, v3
+
+    .line 105
+    :goto_68
+    iget-object v5, p0, Lorg/chromium/chrome/browser/tab/TabImpl;->f:Lorg/chromium/ui/base/WindowAndroid;
+
+    .line 106
+    .line 107
+    invoke-static {v5}, Lwf4;->a(Lorg/chromium/ui/base/WindowAndroid;)Lorg/chromium/chrome/browser/compositor/CompositorViewHolder;
+
+    .line 108
+    .line 109
+    .line 110
+    move-result-object v5
+
+    .line 111
+    if-eqz v5, :cond_7b
+
+    .line 112
+    .line 113
+    invoke-virtual {v5}, Landroid/view/View;->getWidth()I
+
+    .line 114
+    .line 115
+    .line 116
+    move-result v6
+
+    .line 117
+    invoke-virtual {v5}, Landroid/view/View;->getHeight()I
+
+    .line 118
+    .line 119
+    .line 120
+    move-result v5
+
+    .line 121
+    invoke-interface {p1, v6, v5}, Lorg/chromium/content_public/browser/WebContents;->t3(II)V
+
+    .line 122
+    .line 123
+    .line 124
+    :cond_7b
+    iget-object v5, p0, Lorg/chromium/chrome/browser/tab/TabImpl;->d0:Lorg/chromium/chrome/browser/tab/WebContentsState;
+
+    .line 125
+    .line 126
+    invoke-virtual {v5}, Lorg/chromium/chrome/browser/tab/WebContentsState;->destroy()V
+
+    .line 127
+    .line 128
+    .line 129
+    iput-object v2, p0, Lorg/chromium/chrome/browser/tab/TabImpl;->d0:Lorg/chromium/chrome/browser/tab/WebContentsState;
+
+    .line 130
+    .line 131
+    invoke-virtual {p0, p1}, Lorg/chromium/chrome/browser/tab/TabImpl;->u0(Lorg/chromium/content_public/browser/WebContents;)V
+
+    .line 132
+    .line 133
+    .line 134
+    if-nez v4, :cond_98
+
+    .line 135
+    .line 136
+    new-instance p1, Lorg/chromium/content_public/browser/LoadUrlParams;
+
+    .line 137
+    .line 138
+    const/4 v2, 0x5
+
+    .line 139
+    invoke-direct {p1, v2, v0}, Lorg/chromium/content_public/browser/LoadUrlParams;-><init>(ILjava/lang/String;)V
+
+    .line 140
+    .line 141
+    .line 142
+    iput-boolean v3, p1, Lorg/chromium/content_public/browser/LoadUrlParams;->l:Z
+
+    .line 143
+    .line 144
+    invoke-static {}, Lorg/chromium/url/Origin;->b()Lorg/chromium/url/Origin;
